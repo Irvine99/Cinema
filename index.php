@@ -23,7 +23,9 @@
 
     <title>Document</title>
 </head>
-<body>
-    
+<body class="h-screen bg-[url('./assets/img/wallpaper.jpg')]">
+    <div class="flex justify-center items-center h-full bg-black/70">
+        <img src="./assets/img/Logo.png" alt="">
+    </div>
 </body>
 </html>
