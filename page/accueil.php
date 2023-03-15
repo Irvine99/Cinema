@@ -17,6 +17,7 @@
             gray: '#5E5E5E',
             black: '#1C1A29',
             red: '#E82626',
+            lightBlue: '#38354B',
           }
         }
       }
@@ -40,7 +41,11 @@
     <?php include('./sectionAccueil/sliderThree.php') ?>
     <?php include('./sectionAccueil/sliderFour.php') ?>
   </div>
+  <footer>
+  <?php include('../content/navbar.php') ?>
+  </footer>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 </html>
