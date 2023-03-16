@@ -33,26 +33,37 @@
 
     <title>Acceuil</title>
 </head>
-<body class="h-screen bg-[url('./../assets/img/wallpaper.jpg')]">
+<body class="h-auto bg-[url('./../assets/img/wallpaper.jpg')]">
     <div class="h-full bg-black/70">
+    <img src="" alt="">
     <img src="./../assets/img/Logo.png" alt="" class="">
-     <div class="flex flex-col justify-center items-center">
+     <div class="pb-7 flex flex-col justify-center items-center">
         <div class="bg-[#1C1A29]/80 p-1 rounded-lg w-3/4">
             <h1 class="text-xl mb-7 font-bold py-2 text-center">Identifiez vous</h1>
             <div class="flex flex-col items-center gap-1">
+                <label for="" class="">Votre Prénom</label>
+                <input class="rounded-lg w-2/3 bg-[#5E5E5E]" type="text" name="username" id="">
+            </div>
+            <div class="mt-5 flex flex-col items-center gap-1">
+                <label for="" class="">Votre Nom</label>
+                <input class="rounded-lg w-2/3 bg-[#5E5E5E]" type="password" name="name" id="">
+            </div>
+            <div class="mt-5 flex flex-col items-center gap-1">
                 <label for="" class="">Votre email</label>
                 <input class="rounded-lg w-2/3 bg-[#5E5E5E]" type="email" name="" id="">
             </div>
             <div class="mt-5 flex flex-col items-center gap-1">
-                <label for="" class="">Votre password</label>
-                <input class="rounded-lg w-2/3 bg-[#5E5E5E]" type="password" name="" id="">
+                <label for="" class="">Votre mot de passe</label>
+                <input class="rounded-lg w-2/3 bg-[#5E5E5E]" type="password" name="password" id="">
+            </div>
+            <div class="mt-5 flex flex-col items-center gap-1">
+                <label for="" class="">Confirmer votre mot de passe</label>
+                <input class="rounded-lg w-2/3 bg-[#5E5E5E]" type="password" name="password" id="">
             </div>
             <div class="flex justify-center mt-7 mb-2">
                 <button class="bg-[#5E5E5E] rounded-lg py-1 px-4" type="submit">Connexion</button>
             </div>
-            <div class="flex justify-end mx-2">
-                <a href="http://"><h3 class="text-[12px]">pas encore inscrit ?</h3></a>
-            </div>
+            
         </div>    
      </div>     
     </div>
