@@ -35,6 +35,9 @@
 </head>
 <body class="h-screen bg-[url('./../assets/img/wallpaper.jpg')]">
     <div class="h-full bg-black/70">
+     <div class="">
+        <a href="./../page/accueil.php"><img src="./../assets/img/back.png" alt="" class="pt-3 pl-3"></a>
+     </div>   
      <div class="py-5 flex flex-col justify-center items-center">
         <img class="rounded-full h-[150px] w-[150px]" src="./../assets/img/henrycavil.jpg" alt="">
         <div class="flex gap-2 pt-1 ">
