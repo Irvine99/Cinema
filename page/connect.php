@@ -56,9 +56,7 @@
         </div>    
      </div>     
     </div>
-  <footer>
-  <?php include('../content/navbar.php') ?>
-  </footer>
+
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
