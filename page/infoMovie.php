@@ -35,15 +35,27 @@
     <title>InfoMovie</title>
 </head>
 <body class="bg-[#1C1A29]">
-    <img class="h-[500px] w-auto opacity-20" src="./../assets/img/pikadetective.jpg" alt="" class="">
-    <div class="mx-3">
+    <div class="md:hidden">
+        <img class="h-[500px] w-auto opacity-20" src="./../assets/img/pikadetective.jpg" alt="" class="">
+        <div>
+            <?php include('./sectionInfoMovie/infoMovieOne.php'); ?>
+            <?php include('./sectionInfoMovie/infoMovieTwo.php'); ?>
+            <?php include('./sectionInfoMovie/infoMovieThree.php'); ?>
+            <?php include('./sectionInfoMovie/infoMovieFour.php'); ?>
+            <?php include('./sectionInfoMovie/infoMovieFive.php'); ?>
+            <?php include('./sectionInfoMovie/infoMovieSix.php'); ?>
+            <?php include('./sectionInfoMovie/infoMovieSeven.php'); ?>
+        </div>   
+    </div>
+    <div class="hidden md:block lg:hidden">
+        <img class="h-screen w-full opacity-20" src="./../assets/img/pikadetective.jpg" alt="" class="">
+    </div>
+    <div class="hidden lg:block">
+        <div class="h-[800px] w-auto bg-cover bg-fixed bg-[url('./../assets/img/pikadetective.jpg')]">
+            <div class="bg-[#1C1A29]/80 h-full"></div>
+        </div>
         <?php include('./sectionInfoMovie/infoMovieOne.php'); ?>
-        <?php include('./sectionInfoMovie/infoMovieTwo.php'); ?>
-        <?php include('./sectionInfoMovie/infoMovieThree.php'); ?>
-        <?php include('./sectionInfoMovie/infoMovieFour.php'); ?>
         <?php include('./sectionInfoMovie/infoMovieFive.php'); ?>
-        <?php include('./sectionInfoMovie/infoMovieSix.php'); ?>
-        <?php include('./sectionInfoMovie/infoMovieSeven.php'); ?>
     </div>    
     <header>
         <?php include('../content/navbar.php') ?>
