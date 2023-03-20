@@ -46,7 +46,7 @@
         </div>
      </div>
      <div class="flex flex-col justify-center items-center">
-        <div class="bg-[#1C1A29]/80 p-1 rounded-lg w-3/4">
+        <div class="bg-[#1C1A29]/80 p-1 rounded-lg md:w-1/2 lg:w-1/3 w-3/4">
             <h1 class="text-xl mb-7 font-bold py-2 text-center">Modification de votre compte</h1>
             <div class="mx-2 flex flex-col gap-1">
                 <h3 class="text-white/80">Modifier votre Prénom</h3>

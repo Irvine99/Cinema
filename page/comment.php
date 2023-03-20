@@ -37,7 +37,7 @@
 <body class="bg-[#1C1A29]">
     <main>
         <div class="flex justify-between items-center py-3 mx-3">
-            <img class="h-[50px] w-auto" src="./../assets/img/Logo.png" alt="">
+            <img class="lg:h-[100px] h-[50px] w-auto" src="./../assets/img/Logo.png" alt="">
             <h1 class="text-xl font-bold">Commentaires</h1>
             <a href="#commentAdd" class=""><img class="h-[50px] w-[50px]" src="./../assets/img/comment.png" alt=""></a>
         </div>

@@ -35,10 +35,10 @@
 </head>
 <body class="h-auto bg-[url('./../assets/img/wallpaper.jpg')]">
     <div class="h-full bg-black/70">
-    <img src="" alt="">
-    <img src="./../assets/img/Logo.png" alt="" class="">
+    <a href="http://"><div class="p-2"><img src="./../assets/img/back.png" alt=""></div></a>
+    <div class="flex justify-center items-center"><img src="./../assets/img/Logo.png" alt="" class=""></div>
      <div class="pb-7 flex flex-col justify-center items-center">
-        <div class="bg-[#1C1A29]/80 p-1 rounded-lg w-3/4">
+        <div class="bg-[#1C1A29]/80 p-1 rounded-lg md:w-1/2 lg:w-1/3 w-3/4">
             <h1 class="text-xl mb-7 font-bold py-2 text-center">Identifiez vous</h1>
             <div class="flex flex-col items-center gap-1">
                 <label for="" class="">Votre Prénom</label>
