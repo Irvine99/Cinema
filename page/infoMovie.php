@@ -35,8 +35,11 @@
     <title>InfoMovie</title>
 </head>
 <body class="bg-[#1C1A29]">
+    <div class="hidden md:block">
+      <?php include('../content/navbar.php') ?>
+    </div>
     <div class="md:hidden">
-        <img class="h-[500px] w-auto opacity-20" src="./../assets/img/pikadetective.jpg" alt="" class="">
+        <!-- <img  class="h-auto w-auto opacity-20" src="./../assets/img/pikadetective.jpg" alt="" class=""> -->
         <div>
             <?php include('./sectionInfoMovie/infoMovieOne.php'); ?>
             <?php include('./sectionInfoMovie/infoMovieTwo.php'); ?>
@@ -58,7 +61,9 @@
      <?php include('./sectionInfoMovie/infoMovieSeven.php'); ?>
     </div>    
     <header>
+    <div class="md:hidden">
         <?php include('../content/navbar.php') ?>
+    </div>
     </header>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
