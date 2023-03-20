@@ -34,15 +34,25 @@
     <title>Acceuil</title>
 </head>
 <body class="bg-black">
+  <div class="hidden md:block">
+      <?php include('../content/navbar.php') ?>
+    </div>
   <div class="mx-3 w-auto">
-    <?php include('./sectionAccueil/headerProfile.php') ?>
+
+
     <?php include('./sectionAccueil/sliderOne.php') ?>
+    <div class="py-5"></div>
     <?php include('./sectionAccueil/sliderTwo.php') ?>
+    <div class="py-5"></div>
     <?php include('./sectionAccueil/sliderThree.php') ?>
+    <div class="py-5"></div>
     <?php include('./sectionAccueil/sliderFour.php') ?>
   </div>
   <footer>
-  <?php include('../content/navbar.php') ?>
+  <?php include('../content/footer.php') ?>
+  <div class="md:hidden">
+    <?php include('../content/navbar.php') ?>
+  </div>
   </footer>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
