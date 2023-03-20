@@ -47,15 +47,15 @@
             <?php include('./sectionInfoMovie/infoMovieSeven.php'); ?>
         </div>   
     </div>
-    <div class="hidden md:block lg:hidden">
-        <img class="h-screen w-full opacity-20" src="./../assets/img/pikadetective.jpg" alt="" class="">
+    <div class="hidden md:block lg:hidden"> 
+        <?php include('./sectionInfoMovie/infoMovieOne.php'); ?>
+        <?php include('./sectionInfoMovie/infoMovieSix.php'); ?>
+        <?php include('./sectionInfoMovie/infoMovieSeven.php'); ?>
     </div>
     <div class="hidden lg:block">
-        <div class="h-[800px] w-auto bg-cover bg-fixed bg-[url('./../assets/img/pikadetective.jpg')]">
-            <div class="bg-[#1C1A29]/80 h-full"></div>
-        </div>
-        <?php include('./sectionInfoMovie/infoMovieOne.php'); ?>
-        <?php include('./sectionInfoMovie/infoMovieFive.php'); ?>
+     <?php include('./sectionInfoMovie/infoMovieOne.php'); ?>
+     <?php include('./sectionInfoMovie/infoMovieSix.php'); ?>
+     <?php include('./sectionInfoMovie/infoMovieSeven.php'); ?>
     </div>    
     <header>
         <?php include('../content/navbar.php') ?>

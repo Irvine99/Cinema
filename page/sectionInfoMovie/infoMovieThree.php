@@ -1,4 +1,4 @@
-<div class="md:hidden">
+<div class="md:hidden mx-2">
     <h1 class="mt-7 mb-2 font-bold text-xl">A propos</h1>
     <div class="flex flex-col">
         <div class="flex gap-1">
