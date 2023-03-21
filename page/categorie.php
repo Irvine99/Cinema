@@ -34,14 +34,20 @@
     <title>Acceuil</title>
 </head>
 <body class="bg-black">
+<div class="hidden md:block">
+      <?php include('../content/navbar.php') ?>
+    </div>
   <div class="mx-3 w-auto">
-    <?php include('./sectionAccueil/headerProfile.php') ?>
+    
     <?php include('./sectionCategorie/categorieOne.php') ?>
     <?php include('./sectionCategorie/categorieTwo.php') ?>
 
   </div>
+  
   <footer>
-  <?php include('../content/navbar.php') ?>
+  <div class="md:hidden">
+    <?php include('../content/navbar.php') ?>
+  </div>
   </footer>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>

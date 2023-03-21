@@ -3,7 +3,7 @@
 $servername = "localhost";
 $user = "root";
 $password = "";
-$dbname = "reflexivite";
+$dbname = "cinema";
 $dsn = "mysql:host=localhost;dbname=reflexivite";
 
 // Create connection

@@ -1,18 +1,18 @@
 <div class="md:hidden">
-  <div class="mb-7">
+  <div class="mx-2 mb-20">
       <div class="mt-7 mb-2 text-xl font-bold">Dans le même genre</div>
 
   <!--Slider-->
 
 
       <swiper-container class="mySwiper"  slides-per-view="1.5"
-      space-between="20" free-mode="true">
-      <swiper-slide><img class="w-auto h-[250px]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-      <swiper-slide><img class="w-auto h-[250px]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-      <swiper-slide><img class="w-auto h-[250px]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-      <swiper-slide><img class="w-auto h-[250px]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-      <swiper-slide><img class="w-auto h-[250px]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-      <swiper-slide><img class="w-auto h-[250px]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+      space-between="5" free-mode="true">
+      <swiper-slide><img class="w-[75%] h-[75%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+      <swiper-slide><img class="w-[75%] h-[75%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+      <swiper-slide><img class="w-[75%] h-[75%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+      <swiper-slide><img class="w-[75%] h-[75%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+      <swiper-slide><img class="w-[75%] h-[75%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+      <swiper-slide><img class="w-[75%] h-[75%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
 
       </swiper-container>
 
@@ -24,20 +24,20 @@
 <!--Tablette-->
 
 <div class="hidden md:block lg:hidden">
-  <div class="mb-7">
-      <div class="mx-2 mt-7 mb-2 text-xl font-bold">Dans le même genre</div>
+  <div class="mx-2 mb-7">
+      <div class="mt-7  w-full mb-2 text-xl font-bold">Dans le même genre</div>
 
   <!--Slider-->
 
 
-  <swiper-container class="mySwiper mx-2"  slides-per-view="3.8"
+  <swiper-container class="mySwiper "  slides-per-view="3.8"
     space-between="20" free-mode="true">
-    <swiper-slide><img class="w-auto h-[250px]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[250px]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[250px]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[250px]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[250px]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[250px]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+    <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+    <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+    <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+    <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+    <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+    <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
 
     </swiper-container>
 
@@ -49,8 +49,8 @@
 
 <!--Desktop-->
 
-<div class="hidden lg:block">
-  <div class="mb-7">
+<div class="hidden  lg:block">
+  <div class="mx-2 ">
       <div class=" mt-7 mb-2 text-xl font-bold">Dans le même genre</div>
 
   <!--Slider-->
@@ -58,12 +58,12 @@
 
   <swiper-container class="mySwiper "  slides-per-view="5.5"
     space-between="20" free-mode="true">
-    <swiper-slide><img class="w-auto h-[250px]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[250px]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[250px]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[250px]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[250px]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[250px]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+    <swiper-slide><img class="block w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+    <swiper-slide><img class="block w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+    <swiper-slide><img class="block w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+    <swiper-slide><img class="block w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+    <swiper-slide><img class="block w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+    <swiper-slide><img class="block w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
 
     </swiper-container>
 

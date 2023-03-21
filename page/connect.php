@@ -35,26 +35,29 @@
 </head>
 <body class="h-screen bg-[url('./../assets/img/wallpaper.jpg')]">
     <div class="h-full bg-black/70">
+    <a href="./accueil.php"><div class=" p-4"><img class="w-[25px] h-[25px]"src="./../assets/img/back2.png" alt=""></div></a>
     <div class="flex justify-center items-center"><img src="./../assets/img/Logo.png" alt="" class=""></div>
-     <div class="flex flex-col justify-center items-center">
-        <div class="bg-[#1C1A29]/80 p-1 rounded-lg md:w-1/2 lg:w-1/3 w-3/4">
-            <h1 class="text-xl mb-7 font-bold py-2 text-center">Identifiez vous</h1>
-            <div class="flex flex-col items-center gap-1">
-                <label for="" class="">Votre email</label>
-                <input class="rounded-lg w-2/3 bg-[#5E5E5E]" type="email" name="" id="">
-            </div>
-            <div class="mt-5 flex flex-col items-center gap-1">
-                <label for="" class="">Votre password</label>
-                <input class="rounded-lg w-2/3 bg-[#5E5E5E]" type="password" name="" id="">
-            </div>
-            <div class="flex justify-center mt-7 mb-2">
-                <button class="bg-[#5E5E5E] rounded-lg py-1 px-4" type="submit">Connexion</button>
-            </div>
-            <div class="flex justify-end mx-2">
-                <a href="http://"><h3 class="text-[12px]">pas encore inscrit ?</h3></a>
-            </div>
-        </div>    
-     </div>     
+     <form action="../traitement/login.php" method="post">
+        <div class="flex flex-col justify-center items-center">
+          <div class="bg-[#1C1A29]/80 p-1 rounded-lg md:w-1/2 lg:w-1/3 w-3/4">
+              <h1 class="text-xl mb-7 font-bold py-2 text-center">Identifiez vous</h1>
+              <div class="flex flex-col items-center gap-1">
+                  <label for="" class="">Votre email</label>
+                  <input class="rounded-lg w-2/3 bg-[#5E5E5E]" type="email" name="email" id="">
+              </div>
+              <div class="mt-5 flex flex-col items-center gap-1">
+                  <label for="" class="">Votre password</label>
+                  <input class="rounded-lg w-2/3 bg-[#5E5E5E]" type="password" name="password" id="">
+              </div>
+              <div class="flex justify-center mt-7 mb-2">
+                  <button class="bg-[#5E5E5E] rounded-lg py-1 px-4" type="submit">Connexion</button>
+              </div>
+              <div class="flex justify-end mx-2">
+                  <a href="./inscription.php"><h3 class="text-[12px]">pas encore inscrit ?</h3></a>
+              </div>
+          </div>    
+      </div>
+     </form>     
     </div>
 
 </body>
