@@ -1,65 +1,43 @@
-$alert = '<div class="flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert"><svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg><span class="sr-only">Info</span><div><span class="font-medium">Danger alert!</span> Change a few things up and try submitting again.</div></div>';
 
+let regexPassword = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\]).{8,32}$";
 
-$(document).ready(function () {
-    $("form").submit(function (event) {
-      var formData = {
-        username: $("#username").val(),
-        name: $("#name").val(),
-        email: $("#email").val(),
-        password: $("#password").val(),
-        password2: $("#password2").val(),
-      };
+$('#password').on('keyup', function() {
+  let passValue = $(this).val();
   
-      $.ajax({
-        type: "POST",
-        url: "../processForm.php",
-        data: formData,
-        dataType: "json",
-        encode: true,
-      }).done(function (data) {
-        console.log(data);
-      });
+  function updateClass(selector, regex) {
+    if (passValue.match(regex)) {
+      $(selector).removeClass('text-red-500').addClass('text-lime-500');
+      return true;
+    } else {
+      $(selector).removeClass('text-lime-500').addClass('text-red-500');
+      return false;
+    }
+  }
 
-      if (!data.success) {
-        if (data.errors.username) {
-          $("#username-group").addClass($alert);
-          $("#username-group").append(
-            '<div class="help-block">' + data.errors.username + "</div>"
-          );
-        }
-        if (data.errors.name) {
-          $("#name-group").addClass("has-error");
-          $("#name-group").append(
-            '<div class="help-block">' + data.errors.name + "</div>"
-          );
-        }
+  let lower = updateClass('.lower', /[a-z]/g);
+  updateClass('.capi', /[A-Z]/g);
+  updateClass('.number', /[0-9]/g);
+  updateClass('.special', /[,?;.:/!§*]/g);
+  updateClass('.eightMin', /^.{8,}$/);
 
-        if (data.errors.email) {
-          $("#email-group").addClass("has-error");
-          $("#email-group").append(
-            '<div class="help-block">' + data.errors.email + "</div>"
-          );
-        }
+});
 
-        if (data.errors.password) {
-          $("#password-group").addClass("has-error");
-          $("#password-group").append(
-            '<div class="help-block">' + data.errors.password + "</div>"
-          );
-        }
-        if (data.errors.password2) {
-          $("#password2-group").addClass("has-error");
-          $("#password2-group").append(
-            '<div class="help-block">' + data.errors.password2 + "</div>"
-          );
-        }
-      } else {
-        $("form").html(
-          '<div class="alert alert-success">' + data.message + "</div>"
-        );
-      }
+
+
+async function ajax(){
+  let res = await fetch("../traitement/processForm.php");
+  console.log(res);
+  let msg =   await res.json();
+  console.log("bonjour");
+  console.log(msg.toString());
+  console.log("hello");
+  document.getElementById("error").innerHTML = msg.errors;
+
+}
+form.onsubmit = (e) => {
+  ajax();
+  e.preventDefault();
+}
+
   
-      event.preventDefault();
-    });
-  });
+

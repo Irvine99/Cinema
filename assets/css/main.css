@@ -7,3 +7,7 @@
 body{
     color: white;
 }
+
+.password_required{} .password_require ul{
+    color:red;
+}
