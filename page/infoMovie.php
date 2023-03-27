@@ -18,13 +18,15 @@
             colors: {
                 red: '#E82626',
                 gray: '#5E5E5E',
-                darkblue: '#1C1A29'
-            }
-            }
+                darkblue: '#1C1A29',
+            },
+            screens: {
+            sm: '500px',
+            },
         }
         }
     </script>
-
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <!--Flowbite-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css"  rel="stylesheet" />
     <!--Swiper-->
@@ -44,29 +46,41 @@
             <?php include('./sectionInfoMovie/infoMovieOne.php'); ?>
             <?php include('./sectionInfoMovie/infoMovieTwo.php'); ?>
             <?php include('./sectionInfoMovie/infoMovieThree.php'); ?>
+            
             <?php include('./sectionInfoMovie/infoMovieFour.php'); ?>
             <?php include('./sectionInfoMovie/infoMovieFive.php'); ?>
             <?php include('./sectionInfoMovie/infoMovieSix.php'); ?>
             <?php include('./sectionInfoMovie/infoMovieSeven.php'); ?>
         </div>   
     </div>
-    <div class="hidden md:block lg:hidden"> 
+    <div class="hidden md:block lg:hidden">
+    
         <?php include('./sectionInfoMovie/infoMovieOne.php'); ?>
         <?php include('./sectionInfoMovie/infoMovieSix.php'); ?>
         <?php include('./sectionInfoMovie/infoMovieSeven.php'); ?>
     </div>
+
+
+    
     <div class="hidden lg:block">
      <?php include('./sectionInfoMovie/infoMovieOne.php'); ?>
+     <?php include('./sectionInfoMovie/infoMovieTwo.php'); ?>
+     <?php include('./sectionInfoMovie/infoMovieFour.php'); ?>
+     <?php include('./sectionInfoMovie/infoMovieFive.php'); ?>
      <?php include('./sectionInfoMovie/infoMovieSix.php'); ?>
      <?php include('./sectionInfoMovie/infoMovieSeven.php'); ?>
     </div>    
-    <header>
+    <footer>
+    <div class="hidden md:block">
+    <?php include('../content/footer.php') ?>
+    </div>
     <div class="md:hidden">
         <?php include('../content/navbar.php') ?>
     </div>
-    </header>
+    
+    </footer>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
 </html>

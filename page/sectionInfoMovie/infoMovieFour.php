@@ -73,41 +73,41 @@
 <div class="hidden lg:block">
     <div class="w-[90%]">
         
-    <swiper-container class="mySwiper"  slides-per-view="3.5"
+    <swiper-container class="mySwiper"  slides-per-view="8"
     space-between="3" free-mode="true">
     <swiper-slide>
         <div class="mt-7 mb-1 items-center flex flex-col">
-            <img src="./../assets/img/tomcruise.jpg" alt="" class=" h-[100px] w-[100px]">
+            <img src="./../assets/img/tomcruise.jpg" alt="" class=" h-auto w-[100px]">
             <h3 class="">Tom Cruise</h3>
         </div>
     </swiper-slide>
     <swiper-slide>
         <div class="mt-7 mb-1 items-center flex flex-col">
-            <img src="./../assets/img/tomcruise.jpg" alt="" class=" h-[100px] w-[100px]">
+            <img src="./../assets/img/tomcruise.jpg" alt="" class=" h-auto w-[100px]">
             <h3 class="">Tom Cruise</h3>
         </div>
     </swiper-slide>
     <swiper-slide>
         <div class="mt-7 mb-1 items-center flex flex-col">
-            <img src="./../assets/img/tomcruise.jpg" alt="" class=" h-[100px] w-[100px]">
+            <img src="./../assets/img/tomcruise.jpg" alt="" class=" h-auto w-[100px]">
             <h3 class="">Tom Cruise</h3>
         </div>
     </swiper-slide>
     <swiper-slide>
         <div class="mt-7 mb-1 items-center flex flex-col">
-            <img src="./../assets/img/tomcruise.jpg" alt="" class=" h-[100px] w-[100px]">
+            <img src="./../assets/img/tomcruise.jpg" alt="" class=" h-auto w-[100px]">
             <h3 class="">Tom Cruise</h3>
         </div>
     </swiper-slide>
     <swiper-slide>
         <div class="mt-7 mb-1 items-center flex flex-col">
-            <img src="./../assets/img/tomcruise.jpg" alt="" class=" h-[100px] w-[100px]">
+            <img src="./../assets/img/tomcruise.jpg" alt="" class=" h-auto w-[100px]">
             <h3 class="">Tom Cruise</h3>
         </div>
     </swiper-slide>
     <swiper-slide>
         <div class="mt-7 mb-1 items-center flex flex-col">
-            <img src="./../assets/img/tomcruise.jpg" alt="" class=" h-[100px] w-[100px]">
+            <img src="./../assets/img/tomcruise.jpg" alt="" class=" h-auto w-[100px]">
             <h3 class="">Tom Cruise</h3>
         </div>
     </swiper-slide>

@@ -18,7 +18,7 @@
 
 <div class="hidden lg:block">
     <div class="bg-[#1C1A29] py-5 w-full ">
-        <div class="mx-2 mb-2 text-xl font-bold ">Bande annonce</div>
+        <div class="mx-2 mb-5 text-xl font-bold ">Bande annonce</div>
         <div class="flex justify-center">
         <iframe class="w-3/4 aspect-video ..." src="https://www.youtube.com/embed/BaLO9MbIfXI"></iframe>
         </div>

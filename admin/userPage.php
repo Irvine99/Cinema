@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,22 +35,28 @@
 
     <title>Acceuil</title>
 </head>
-<body class="bg-black">
-<div class="hidden md:block">
-      <?php include('../content/navbar.php') ?>
-    </div>
-  <div class="mx-3 w-auto">
-    
-    <?php include('./sectionCategorie/categorieOne.php') ?>
-    <?php include('./sectionCategorie/categorieTwo.php') ?>
+<body class="h-screen bg-[url('./../assets/img/wallpaper.jpg')]">
+    <div class="h-full bg-black/70">
+     <div class="">
+        <a href="./../page/accueil.php"><img src="./../assets/img/back.png" alt="" class="pt-3 pl-3"></a>
+     </div>   
+     <div class="py-5 flex flex-col justify-center items-center">
+        <img class="rounded-full h-[150px] w-[150px]" src="./../assets/img/henrycavil.jpg" alt="">
+        <div class="flex gap-2 pt-1 ">
+            <h3 class="text-xl"><?= $_SESSION['username'] ?></h3>
+            <h3 class="text-xl"><?= $_SESSION['name'] ?></h3>
+        </div>
+     </div>
+     <div class="flex flex-col justify-center items-center">
+        <div class="bg-[#1C1A29]/80 p-1 rounded-lg md:w-1/2 lg:w-1/3 w-3/4">
+            
 
-  </div>
-  
-  <footer>
-  <div class="md:hidden">
-    <?php include('../content/navbar.php') ?>
-  </div>
-  </footer>
+            
+            
+        </div>    
+     </div>     
+    </div>
+
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

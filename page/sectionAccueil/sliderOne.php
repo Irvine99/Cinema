@@ -25,7 +25,7 @@
 
 <swiper-container class="mySwiper"  slides-per-view="4"
     space-between="20" free-mode="true">
-    <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+    <swiper-slide><a href="./infoMovie.php"><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></a></swiper-slide>
     <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
     <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
     <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
@@ -40,13 +40,13 @@
 
 <!--Desktop-->
 
-<div class="hidden lg:block">
+<div class="mt-20 hidden lg:block">
   <!--Slider-->
 
 
 <swiper-container class="mySwiper"  slides-per-view="5"
     space-between="20" free-mode="true">
-    <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+    <swiper-slide><a href="./infoMovie.php"><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></a></swiper-slide>
     <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
     <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
     <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>

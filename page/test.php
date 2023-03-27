@@ -33,22 +33,27 @@
 
     <title>Acceuil</title>
 </head>
-<body class="bg-black">
-<div class="hidden md:block">
-      <?php include('../content/navbar.php') ?>
-    </div>
-  <div class="mx-3 w-auto">
-    
-    <?php include('./sectionCategorie/categorieOne.php') ?>
-    <?php include('./sectionCategorie/categorieTwo.php') ?>
+<body class="h-screen bg-[url('./../assets/img/wallpaper.jpg')]">
+    <div class="h-full bg-black/70">
+    <img src="./../assets/img/Logo.png" alt="" class="">
+     <form action="../traitement/apiAccessMovie.php" method="GET">
+      <div class="flex flex-col justify-center items-center">
+          <div class="bg-[#1C1A29]/80 p-1 rounded-lg w-3/4">
+              <h1 class="text-xl mb-7 font-bold py-2 text-center">Identifiez vous</h1>
+              <div class="flex flex-col items-center gap-1">
+                  <label for="" class="">Tapez votre recherche</label>
+                  <input class="text-black rounded-lg bg-[#5E5E5E]/80 p-2" type="search" name="" id="">
+              </div>
 
-  </div>
-  
-  <footer>
-  <div class="md:hidden">
-    <?php include('../content/navbar.php') ?>
-  </div>
-  </footer>
+              <div class="flex justify-center mt-7 mb-2">
+                  <button class="bg-[#5E5E5E] rounded-lg py-1 px-4" type="submit">Envoyer</button>
+              </div>
+              
+          </div>    
+      </div> 
+     </form>    
+    </div>
+
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

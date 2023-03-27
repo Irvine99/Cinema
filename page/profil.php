@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,8 +43,8 @@
      <div class="py-5 flex flex-col justify-center items-center">
         <img class="rounded-full h-[150px] w-[150px]" src="./../assets/img/henrycavil.jpg" alt="">
         <div class="flex gap-2 pt-1 ">
-            <h3 class="text-xl">Stanislas</h3>
-            <h3 class="text-xl">Gerardin</h3>
+            <h3 class="text-xl"><?= $_SESSION['username'] ?></h3>
+            <h3 class="text-xl"><?= $_SESSION['name'] ?></h3>
         </div>
      </div>
      <div class="flex flex-col justify-center items-center">
@@ -62,6 +64,10 @@
             <div class="mb-3 flex justify-start mx-2 flex gap-1">
                 <a class ="bg-[#E82626] text-white py-1 px-4 rounded-lg" href="http://">Supprimer</a>
                 
+            </div>
+            <h1 class="mt-7 mb-2 text-xl mb-7 font-bold py-2 text-center">Vous deconnecter</h1>
+            <div class="mb-3 flex justify-start mx-2 flex gap-1">
+            <a  class ="bg-[#E82626] text-white py-1 px-4 rounded-lg" href="../traitement/logOut.php">Deconnection</a>
             </div>
             
             

@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,8 +40,10 @@
       <?php include('../content/navbar.php') ?>
     </div>
   <div class="mx-3 w-auto">
-
-
+  <div class="md:hidden"><?php include('./sectionAccueil/headerProfile.php') ?></div>  
+    
+    
+    <div class="py-5"></div>
     <?php include('./sectionAccueil/sliderOne.php') ?>
     <div class="py-5"></div>
     <?php include('./sectionAccueil/sliderTwo.php') ?>
