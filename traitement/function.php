@@ -16,9 +16,5 @@ function userAll() {
     }
 }
 
-function processForm() {
-
-
-}
 
 ?>
