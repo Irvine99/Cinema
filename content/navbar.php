@@ -5,7 +5,11 @@
             <a href="./accueil.php"><img class="h-[30px] w-[30xp]" src="./../assets/img/home2.png" alt="" class=""></a>
             <a href="./accueil.php"><img class="h-[30px] w-[30xp]" src="./../assets/img/search2.png" alt="" class=""></a>
             <a href="./accueil.php"><img class="h-[30px] w-[30xp]" src="./../assets/img/star.png" alt="" class=""></a>
-            <a href="./profil.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/henrycavil.jpg" alt="" class=""></a>
+            <?php if(isset($_SESSION['id_user'])) { ?>
+                <a href="./profil.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/henrycavil.jpg" alt="" class=""></a>
+            <?php }else{ ?>  
+                <a href="./connect.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/connect.png" alt="" class=""></a>
+            <?php } ?>
             </div>
         </div>
     </div>
@@ -32,7 +36,12 @@
             </div>
             <div class="flex items-end gap-2  ">
                 <h3 class="lg:text-xl text-xl">Bienvenue <span> Invité </span></h3>
-                <a class="" href="./connect.php"><img class="rounded-full h-[50px] w-[50px]" src="./../assets/img/henrycavil.jpg" alt="" class=""></a>
+                <?php if(isset($_SESSION['id_user'])) { ?>
+                <a href="./profil.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/henrycavil.jpg" alt="" class=""></a>
+                 <?php }else { ?>  
+                <a href="./connect.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/connect.png" alt="" class=""></a>
+                <?php } ?>
+                </div>
                 
             </div>
 

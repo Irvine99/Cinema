@@ -1,5 +1,5 @@
 
-let regexPassword = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\]).{8,32}$";
+
 
 $('#password').on('keyup', function() {
   let passValue = $(this).val();
@@ -20,24 +20,63 @@ $('#password').on('keyup', function() {
   updateClass('.special', /[,?;.:/!§*]/g);
   updateClass('.eightMin', /^.{8,}$/);
 
+  
+
 });
 
 
 
-async function ajax(){
-  let res = await fetch("../traitement/processForm.php");
+  async function ajax(){
+  let formData = new FormData(form);
+  
+  let res = await fetch('/portfolioV3/projets/cinema/traitement/processForm.php', 
+   {
+          method: 'POST',
+          body: formData,
+        });
   console.log(res);
-  let msg =   await res.json();
-  console.log("bonjour");
+  let msg = await res.json();
+  if (msg['success'] != undefined) {
+      let _form = document.getElementById('form');
+      _form.parentNode.removeChild(_form);
+      document.getElementById('success').innerHTML = msg['success'];
+      document.getElementById('successMsg').classList.remove('hidden');
+  } else {
+    document.getElementById('error').innerHTML = msg['error'];
+    document.getElementById('errorMsg').classList.remove('hidden');
+  }
+  console.log('bonjour');
   console.log(msg.toString());
-  console.log("hello");
-  document.getElementById("error").innerHTML = msg.errors;
+  
+
+
+  
 
 }
 form.onsubmit = (e) => {
   ajax();
   e.preventDefault();
 }
+
+
+
+
+
+
+// async function inscription(form_data){
+//   try {
+//     let response = await fetch('/portfolioV3/projets/cinema/traitement/processForm.php', {
+//       method: 'POST',
+//       body: form_data
+//     });
+//     let result = await response.json();
+//     console.log(result);
+//     return result;
+//   } catch (error) {
+//     console.error('Une erreur s\'est produite: ', error);
+//     throw error;
+//   }
+// }
 
   
 

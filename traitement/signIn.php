@@ -6,7 +6,7 @@
     require_once('./access.php');
     
 
-
+    $data =[];
 
 
     if($_POST) {
@@ -29,8 +29,8 @@
     
                 if(empty($emailFind)) {
     
-                    $insertForm = "INSERT INTO users (name, username, email, password)
-                    VALUES (:name, :username, :email, :password)";
+                    $insertForm = "INSERT INTO users (name, username, date_create, email, password)
+                    VALUES (:name, :username,NOW(), :email, :password)";
          
                     $insertData = $conn->prepare($insertForm);
                     $insertData->execute([
@@ -40,19 +40,22 @@
                         'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
                         
                     ]);
-                    var_dump('enregistrer');
+                    $data['success'] = "Vous vous etes bien enregistrer";
                     // header('Location: ../index.php');    
                 }else{
+                    $data['error'] => ["msgError"] = "Une erreur est survenue.";
                     var_dump('erreur');
                     // header('Location: ../index.php');  
                 }
                 
               
             }else{
+                $data['error'] => ["pasBon"] = "Un champs n'est pas remplie correctement";
                 var_dump('pas bon');
                 // header('Location: ../index.php');  
             } 
         }else{
+            $data['error'] => ['sameMpd'] = "Vos mots de passe ne sont pas identique";
             var_dump('vos mdp ne sont pas identique');
         }
 

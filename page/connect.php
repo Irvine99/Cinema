@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./../assets/css/sliderOne.css">
+
     <link rel="stylesheet" href="./../assets/css/main.css">
 
         <!--Tailwind-->
@@ -37,10 +37,16 @@
     <div class="h-full bg-black/70">
     <a href="./accueil.php"><div class=" p-4"><img class="w-[25px] h-[25px]"src="./../assets/img/back2.png" alt=""></div></a>
     <div class="flex justify-center items-center"><img src="./../assets/img/Logo.png" alt="" class=""></div>
-     <form action="../traitement/login.php" method="post">
+      <div id='successMsg' class="hidden flex justify-center">
+        <div id='success' class=" w-1/2 text-black font-bold text-center p-2 bg-lime-500 rounded-lg"></div>
+      </div>
+     <form id='form' action="" method="post">
         <div class="flex flex-col justify-center items-center">
-          <div class="bg-[#1C1A29]/80 p-1 rounded-lg md:w-1/2 lg:w-1/3 w-3/4">
+          <div class="bg-[#1C1A29]/80 p-1 rounded-lg md:w-1/2 lg:w-1/4 w-3/4">
               <h1 class="text-xl mb-7 font-bold py-2 text-center">Identifiez vous</h1>
+              <div id='errorMsg' class="hidden flex justify-center">
+                <div id='error' class="text-white text-center w-[90%] mb-5 p-5 bg-red-500 rounded-lg "></div>
+              </div>
               <div class="flex flex-col items-center gap-1">
                   <label for="" class="">Votre email</label>
                   <input class="rounded-lg w-2/3 bg-[#5E5E5E]" type="email" name="email" id="">
@@ -64,4 +70,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+    crossorigin="anonymous"></script>
+<script src="./../assets/js/connect.js"></script>
 </html>

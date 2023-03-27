@@ -2,14 +2,15 @@
 
 <?php
 
+$data = [];
+
 require_once('./access.php');
 
 
 if($_POST) {
     $inputEmail = htmlspecialchars($_POST['email']);
     $inputPassword = htmlspecialchars($_POST['password']);
-    var_dump($inputEmail);
-    var_dump($inputPassword);
+
 }
     if(!($inputEmail == "") && !($inputPassword == "")){
        
@@ -17,30 +18,30 @@ if($_POST) {
         $requetes = $conn->prepare($utilisateur);
         $requetes->execute(['email' => $inputEmail]);
         $passwordFind = $requetes->fetch();
-        var_dump($passwordFind);
+        
 
         
-        if(password_verify( $inputPassword, $passwordFind['password'])) {
+        if(password_verify($inputPassword, $passwordFind['password'])) {
             $_SESSION['id_user'] = $passwordFind['Id_users'];
-            $_SESSION['name'] = $passwordFind['name'];
-            $_SESSION['surname'] = $passwordFind['surname'];
+            $_SESSION['username'] = $passwordFind['username'];
+            $_SESSION['name'] = $passwordFind['name'];  
 
-            // header('Location: ../login.php');
-            var_dump('bon');
+            $data['success'] = 'Vous êtes bien connecter';
+            
 
         }else{
-            var_dump('mauvais');
             
-            // header('Location: ../login.php');
+            $data['error'] = 'Mot de passe incorrect';
+            
 
         }
     }else {
         unset($_SESSION['password']);
         unset($_SESSION['email']);
-        var_dump('mauvais encore');
+        $date['error'] = 'Veuillez remplir les champs';
 
-        // header('Location: ../login.php');
+        
     }
 
-
+    echo json_encode($data);
 ?>
