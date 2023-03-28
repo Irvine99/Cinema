@@ -35,10 +35,13 @@
                 <h3 class="lg:text-xl text-xl">Favoris</h3></a>
             </div>
             <div class="flex items-end gap-2  ">
-                <h3 class="lg:text-xl text-xl">Bienvenue <span> Invité </span></h3>
-                <?php if(isset($_SESSION['id_user'])) { ?>
+                <h3 class="lg:text-xl text-xl">Bienvenue
+                <?php if(isset($_SESSION['id_user'])) { ?> 
+                <span><?= $_SESSION['username'] ?> </span></h3>
+                
                 <a href="./profil.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/henrycavil.jpg" alt="" class=""></a>
-                 <?php }else { ?>  
+                 <?php }else { ?>
+                    <span>invité </span></h3>  
                 <a href="./connect.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/connect.png" alt="" class=""></a>
                 <?php } ?>
                 </div>

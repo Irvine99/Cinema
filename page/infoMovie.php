@@ -1,3 +1,6 @@
+<?php session_start() ?>
+<?php include('../traitement/function.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,6 +42,7 @@
 <body class="bg-[#1C1A29]">
     <div class="hidden md:block">
       <?php include('../content/navbar.php') ?>
+
     </div>
     <div class="md:hidden">
         <!-- <img  class="h-auto w-auto opacity-20" src="./../assets/img/pikadetective.jpg" alt="" class=""> -->

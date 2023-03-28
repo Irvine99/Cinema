@@ -1,3 +1,7 @@
+<?php session_start() ?>
+<?php include('../traitement/function.php') ?>
+<?php include('../traitement/access.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,15 +43,16 @@
      <form action="../traitement/apiAccessMovie.php" method="GET">
       <div class="flex flex-col justify-center items-center">
           <div class="bg-[#1C1A29]/80 p-1 rounded-lg w-3/4">
-              <h1 class="text-xl mb-7 font-bold py-2 text-center">Identifiez vous</h1>
-              <div class="flex flex-col items-center gap-1">
-                  <label for="" class="">Tapez votre recherche</label>
-                  <input class="text-black rounded-lg bg-[#5E5E5E]/80 p-2" type="search" name="" id="">
-              </div>
+              <h3 class="mb-2">TEST</h3>
+               <div class="flex ">
+                <div class=""><?php searchTablePri(); ?></div>
+                <div class=""><?php searchTableSec(); ?></div>
+               </div>
+              
+              
+              
 
-              <div class="flex justify-center mt-7 mb-2">
-                  <button class="bg-[#5E5E5E] rounded-lg py-1 px-4" type="submit">Envoyer</button>
-              </div>
+
               
           </div>    
       </div> 

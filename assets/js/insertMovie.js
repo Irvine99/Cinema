@@ -1,7 +1,7 @@
 async function ajax(){
     let formData = new FormData(form);
     
-    let res = await fetch('/portfolioV3/projets/cinema/traitement/login.php', 
+    let res = await fetch('/portfolioV3/projets/cinema/traitement/processForm.php', 
      {
             method: 'POST',
             body: formData,
@@ -28,5 +28,4 @@ async function ajax(){
   form.onsubmit = (e) => {
     ajax();
     e.preventDefault();
-    
   }
