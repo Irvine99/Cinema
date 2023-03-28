@@ -4,12 +4,14 @@
 
 <swiper-container class="mySwiper"  slides-per-view="1.5"
     space-between="20" free-mode="true">
-    <swiper-slide><a href="./infoMovie.php"><img class="w-auto h-[10%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></a></swiper-slide>
-    <swiper-slide><img class="w-auto h-[10%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[10%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[10%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[10%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[10%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+    <?php 
+    $movies = movieAll();
+    foreach ($movies as $movie) { ?>
+      <swiper-slide><a value=" ?>" href="./infoMovie.php?value=<?php echo urlencode($movie['Id_movie']);?>"><img class="w-auto h-[10%]" src="<?= $movie['affiche_movie'] ?>" alt="" class=""></a></swiper-slide>
+    <?php } ?>
+      
+    
+    
 
     </swiper-container>
 
@@ -25,12 +27,12 @@
 
 <swiper-container class="mySwiper"  slides-per-view="4"
     space-between="20" free-mode="true">
-    <swiper-slide><a href="./infoMovie.php"><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></a></swiper-slide>
-    <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+    <?php 
+    $movies = movieAll();
+    foreach ($movies as $movie) { ?>
+      <swiper-slide><a href="./infoMovie.php?value=<?php echo urlencode($movie['Id_movie']);?>"><img class="w-auto h-[10%]" src="<?= $movie['affiche_movie'] ?>" alt="" class=""></a></swiper-slide>
+    <?php } ?>
+
 
     </swiper-container>
 
@@ -46,12 +48,11 @@
 
 <swiper-container class="mySwiper"  slides-per-view="5"
     space-between="20" free-mode="true">
-    <swiper-slide><a href="./infoMovie.php"><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></a></swiper-slide>
-    <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
-    <swiper-slide><img class="w-auto h-[30%]" src="./../assets/img/pikadetective.jpg" alt="" class=""></swiper-slide>
+    <?php 
+    $movies = movieAll();
+    foreach ($movies as $movie) { ?>
+      <swiper-slide><a href="./infoMovie.php?value=<?php echo urlencode($movie['Id_movie']);?>"><img class="w-auto h-[10%]" src="<?= $movie['affiche_movie'] ?>" alt="" class=""></a></swiper-slide>
+    <?php } ?>
 
     </swiper-container>
 

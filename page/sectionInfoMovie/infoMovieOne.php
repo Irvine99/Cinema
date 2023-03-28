@@ -1,9 +1,16 @@
+<?php
+$idMovieGet = $_GET['value']; 
+$idMovie = movieIdCompare($idMovieGet);
+
+?>
+
+
 <div class="md:hidden">
-    <div class="h-auto bg-cover bg-[url('./../assets/img/pikadetective.jpg')]">
+    <div class="h-auto bg-cover bg-[url('<?= $idMovie['affiche_movie'] ?>')]">
         <div class="flex bg-[#1C1A29]/80 h-full">    
             <div class="mx-2 flex justify-between  my-5">
                 <div class="flex w-1/2  flex-col ">
-                    <h1 class=" text-white text-xl mb-5 font-bold">Detective Pikachu</h1>
+                    <h1 class=" text-white text-xl mb-5 font-bold"><?= $idMovie['name_movie'] ?></h1>
                     <div class="flex flex-col">
                         <div class="flex gap-3">
                             <img class="w-[25px] h-[25px]" src="./../assets/img/hourglass.png" alt="" class="">
@@ -29,7 +36,7 @@
                     <button class="bg-[#E82626] w-1/2 mt-5  rounded-lg text-white py-1 px-2">Regarder</button>
                 </div>
                 <div class="w-1/2">
-                    <img  src="./../assets/img/pikadetective.jpg" alt="" class="rounded-lg  h-full w-full">
+                    <img  src="<?= $idMovie['affiche_movie'] ?>" alt="" class="rounded-lg  h-full w-full">
                 </div>
                 
             </div>
@@ -40,10 +47,10 @@
 <!--Tablette-->
 <div class="hidden md:block lg:hidden">
     <div class="">
-        <h1 class="text-3xl text-center font-bold mt-5">Detective Pikachu</h1>
+        <h1 class="text-3xl text-center font-bold mt-5"><?= $idMovie['name_movie'] ?></h1>
         <div class="mx-2 flex my-5">
              <div class="w-[60%] items-center flex mr-5">
-                <img  src="./../assets/img/pikadetective.jpg" alt="" class="rounded-lg block h-full w-full">
+                <img  src="<?= $idMovie['affiche_movie'] ?>" alt="" class="rounded-lg block h-full w-full">
             </div>            
             <div class="w-[40%] flex flex-col ">
                 <h1 class=" text-white text-xl font-bold">Informations</h1>
@@ -82,12 +89,12 @@
 
 <!--Desktop-->
 <div class="hidden lg:block">
-    <div class="h-auto bg-cover bg-[url('./../assets/img/pikadetective.jpg')]">
+    <div class="h-auto bg-cover bg-[url(<?= $idMovie['affiche_movie'] ?>)]">
         <div class="flex flex-col bg-[#1C1A29]/80 h-full">
-        <h1 class="text-5xl text-center font-bold py-5">Detective Pikachu</h1>
+        <h1 class="text-5xl text-center font-bold py-5"><?= $idMovie['name_movie'] ?></h1>
         <div class="h-[500px] mx-2 flex my-5">
              <div class=" justify-center items-center flex mr-5">
-                <img  src="./../assets/img/pikadetective.jpg" alt="" class="rounded-lg block h-full w-auto">
+                <img  src="<?= $idMovie['affiche_movie'] ?>" alt="" class="rounded-lg block h-full w-auto">
             </div>            
             <div class="w-[60%] flex flex-col ">
                 <h1 class=" text-white text-2xl mb-5 font-bold">Informations</h1>

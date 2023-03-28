@@ -24,7 +24,8 @@ if($_POST) {
         if(password_verify($inputPassword, $passwordFind['password'])) {
             $_SESSION['id_user'] = $passwordFind['Id_users'];
             $_SESSION['username'] = $passwordFind['username'];
-            $_SESSION['name'] = $passwordFind['name'];  
+            $_SESSION['name'] = $passwordFind['name'];
+             
 
             $data['success'] = 'Vous êtes bien connecter';
             
