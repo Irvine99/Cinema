@@ -37,8 +37,12 @@
     <title>Acceuil</title>
 </head>
 <body class="h-screen bg-[url('./../assets/img/wallpaper.jpg')]">
-    <div class="min-h-full bg-black/70"> 
+    <div class="min-h-full bg-black/70">
+    <div class="">
+        <a href="./admin.php"><img src="./../assets/img/back2.png" alt="" class="pt-3 pl-3"></a>
+     </div> 
      <div class="py-5 flex flex-col justify-center items-center">
+        <img class="rounded-full h-[150px] w-[150px]" src="./../assets/img/pikahead.jpg" alt="">
         <h1 class="">Modification du Film</h1>
         <div class="flex w-full flex-col justify-center items-center">
             <div class="bg-[#1C1A29]/80 p-1 rounded-lg w-3/4">

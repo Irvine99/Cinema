@@ -38,10 +38,10 @@
 <body class="h-screen bg-[url('./../assets/img/wallpaper.jpg')]">
     <div class="h-full bg-black/70">
      <div class="">
-        <a href="./admin.php"><img src="./../assets/img/back.png" alt="" class="pt-3 pl-3"></a>
+        <a href="./../page/accueil.php"><img src="./../assets/img/back.png" alt="" class="pt-3 pl-3"></a>
      </div>   
      <div class="py-5 flex flex-col justify-center items-center">
-        <img class="rounded-full h-[150px] w-[150px]" src="./../assets/img/pikaheader.jpg" alt="">
+        <img class="rounded-full h-[150px] w-[150px]" src="./../assets/img/pikahead.jpg" alt="">
         <div class="flex gap-2 pt-1 ">
             <h3 class="text-xl"><?= $_SESSION['username'] ?></h3>
             <h3 class="text-xl"><?= $_SESSION['name'] ?></h3>
@@ -49,25 +49,18 @@
      </div>
      <div class="flex flex-col justify-center items-center">
         <div class="bg-[#1C1A29]/80 p-1 rounded-lg md:w-1/2 lg:w-1/3 w-3/4">
-            <h1 class="text-xl mb-7 font-bold py-2 text-center">Modification de votre compte</h1>
-            <div class="mx-2 flex flex-col gap-1">
-                <h3 class="text-white/80">Modifier votre Prénom</h3>
-                <h3 class="text-white/80">Modifier votre Nom</h3>
-            </div>
-            <h1 class="mt-7 mb-2 text-xl mb-7 font-bold py-2 text-center">Information de votre compte</h1>
-            <div class="mx-2 flex gap-1">
-                <h3 class="text-white/80">Votre email : </h3>
-                <h3 class="text-white/80">Bougou@bougou.com </h3>
+            <div class="">
+                <div class="mx-2">
+                    <h1 class="text-2xl mb-2">Partie Administrative</h1>
+                    
+                    <a href="./userPage.php"><h3 class="hover:text-blue-500">Voir les utlisateurs</h3></a>
+                    <a href="./moviePage.php"><h3 class="hover:text-blue-500">Voir les films</h3></a>
+                </div>
+                <div class="mx-2 mt-10">
+                    <h1 class="text-2xl mb-2">Partie Formulaire</h1>
+                    <a href="./insertMovie.php"><h3 class="hover:text-blue-500">Inserer un film</h3></a>
+                </div>
                 
-            </div>
-            <h1 class="mt-7 mb-2 text-xl mb-7 font-bold py-2 text-center">Suppression de votre compte</h1>
-            <div class="mb-3 flex justify-start mx-2 flex gap-1">
-                <a class ="bg-[#E82626] text-white py-1 px-4 rounded-lg" href="http://">Supprimer</a>
-                
-            </div>
-            <h1 class="mt-7 mb-2 text-xl mb-7 font-bold py-2 text-center">Vous deconnecter</h1>
-            <div class="mb-3 flex justify-start mx-2 flex gap-1">
-            <a  class ="bg-[#E82626] text-white py-1 px-4 rounded-lg" href="../traitement/logOut.php">Deconnection</a>
             </div>
             
             
