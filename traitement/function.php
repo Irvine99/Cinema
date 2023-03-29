@@ -228,4 +228,55 @@ function searchCategorie() {
         exit;
     }
 }
+function searchMovie() {
+    if(require('access.php')) {
+        $movie = "SELECT * FROM movie ORDER BY name_movie";
+        $requestmovie = $conn->prepare($movie);
+        $requestmovie->execute();
+        $findmovie = $requestmovie->fetchALL();
+
+        return $findmovie;
+        exit;
+    }
+}
+
+function searchProducer() {
+    if(require('access.php')) {
+        $producer = "SELECT * FROM producer ORDER BY name_producer";
+        $requestproducer = $conn->prepare($producer);
+        $requestproducer->execute();
+        $findproducer = $requestproducer->fetchALL();
+
+        return $findproducer;
+        exit;
+    }
+}
+
+
+function searchActor() {
+    if(require('access.php')) {
+        $actor = "SELECT * FROM actor ORDER BY name_actor";
+        $requestactor = $conn->prepare($actor);
+        $requestactor->execute();
+        $findactor = $requestactor->fetchALL();
+
+        return $findactor;
+        exit;
+    }
+}
+
+
+function searchDirector() {
+    if(require('access.php')) {
+        $director = "SELECT * FROM director ORDER BY name_director";
+        $requestdirector = $conn->prepare($director);
+        $requestdirector->execute();
+        $finddirector = $requestdirector->fetchALL();
+
+        return $finddirector;
+        exit;
+    }
+}
+
+
 ?>
