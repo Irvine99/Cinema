@@ -64,3 +64,17 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 </html>
+
+
+<div class="flex w-full">
+                <div class="w-full"><?php include('../content/dropDownProducer.php') ?></div>
+                <?php include('./contentDropdown/downProducer.php') ?>
+            </div>
+            <div class="flex w-full">
+                <div class="w-full"><?php include('../content/dropDownDirector.php') ?></div>
+                <?php include('./contentDropdown/downDirector.php') ?>
+            </div>          
+            <div class="flex w-full">
+                <div class="w-full"><?php include('../content/dropDownCategory.php') ?></div>
+                <?php include('./contentDropdown/downDirector.php') ?>
+            </div>  
