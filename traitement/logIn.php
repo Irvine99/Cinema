@@ -25,6 +25,7 @@ if($_POST) {
             $_SESSION['id_user'] = $passwordFind['Id_users'];
             $_SESSION['username'] = $passwordFind['username'];
             $_SESSION['name'] = $passwordFind['name'];
+            $_SESSION['role'] = $passwordFind['Id_role'];
              
 
             $data['success'] = 'Vous êtes bien connecter';

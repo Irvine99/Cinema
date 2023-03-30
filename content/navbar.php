@@ -5,8 +5,14 @@
             <a href="./accueil.php"><img class="h-[30px] w-[30xp]" src="./../assets/img/home2.png" alt="" class=""></a>
             <a href="./accueil.php"><img class="h-[30px] w-[30xp]" src="./../assets/img/search2.png" alt="" class=""></a>
             <a href="./accueil.php"><img class="h-[30px] w-[30xp]" src="./../assets/img/star.png" alt="" class=""></a>
-            <?php if(isset($_SESSION['id_user'])) { ?>
-                <a href="./profil.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/henrycavil.jpg" alt="" class=""></a>
+            <?php if(isset($_SESSION['id_user'])) {
+                 if($_SESSION['role'] == 0) { ?>
+                    <a href="./profil.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/henrycavil.jpg" alt="" class=""></a>
+                <?php }elseif ($_SESSION['role'] == 2) { ?>
+                    <a href="./admin.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/pikahead.jpg" alt="" class=""></a>
+                <?php }
+                ?>
+                
             <?php }else{ ?>  
                 <a href="./connect.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/connect.png" alt="" class=""></a>
             <?php } ?>
@@ -36,14 +42,18 @@
             </div>
             <div class="flex items-end gap-2  ">
                 <h3 class="lg:text-xl text-xl">Bienvenue
-                <?php if(isset($_SESSION['id_user'])) { ?> 
-                <span><?= $_SESSION['username'] ?> </span></h3>
+                <?php if(isset($_SESSION['id_user'])) { ?>
+                 <span class=""><?= $_SESSION['username'] ?></span></h3>   
+                <?php if($_SESSION['role'] == 0) { ?>
+                    <a href="./profil.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/henrycavil.jpg" alt="" class=""></a>
+                <?php }elseif ($_SESSION['role'] == 2) { ?>
+                    <a href="../admin/admin.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/pikahead.jpg" alt="" class=""></a>
+                <?php }
+                ?>
                 
-                <a href="./profil.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/henrycavil.jpg" alt="" class=""></a>
-                 <?php }else { ?>
-                    <span>invité </span></h3>  
-                <a href="./connect.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/connect.png" alt="" class=""></a>
-                <?php } ?>
+            <?php }else{ ?>  
+                    <a href="./connect.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/connect.png" alt="" class=""></a>
+            <?php } ?>
                 </div>
                 
             </div>

@@ -4,7 +4,7 @@
     <h1 class="mx-2 text-md md:text-2xl">Ajout d'un film</h1>
     <div class=" mx-2 mt-5 flex-col flex">
         <label for="">Titre du film</label>
-        <input name="titleMovie" class="mt-2 w-3/4 &&& rounded-lg" type="text">
+        <input name="titleMovie" class="mt-2 w-3/4 bg-[#5E5E5E]/80 rounded-lg rounded-lg" type="text">
     </div>
     <div class=" mx-2 mt-5 flex-col flex">
         <label for="">Sypnosis du film</label>
@@ -22,9 +22,9 @@
         <label for="">budget du film</label>
         <input type="file" name="afficheMovie" id="affiche">
     </div>
-    <!-- <div class="flex justify-center mt-5">
+    <div class="flex justify-center mt-5">
         <button class="bg-[#5E5E5E]/80 p-2 rounded-lg mb-5" type="submit">Envoyer</button>
-    </div> -->
+    </div>
 
     
 </div>
