@@ -53,8 +53,8 @@
                 <div class="mx-2">
                     <h1 class="text-2xl mb-2">Partie Administrative</h1>
                     
-                    <a href="./userPage.php"><h3 class="hover:text-blue-500">Voir les utlisateurs</h3></a>
-                    <a href="./moviePage.php"><h3 class="hover:text-blue-500">Voir les films</h3></a>
+                    <a href="./userPage.php"><h3 class="hover:text-blue-500">Voir les Utlisateurs</h3></a>
+                    <a href="./moviePage.php"><h3 class="hover:text-blue-500">Voir les Films</h3></a>
                 </div>
                 <div class="mx-2 mt-10">
                     <h1 class="text-2xl mb-2">Partie Formulaire</h1>
