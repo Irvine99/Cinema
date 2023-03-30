@@ -118,7 +118,7 @@
                     <a href="./infoMovie.php?value=<?php echo urlencode($movieId);?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
                 <td class="px-6 py-4">
-                    <a data-modal-target="popup-modal.<?= $movieId ?>" data-modal-toggle="popup-modal.<?= $movieId ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Supprimer</a>
+                    <button data-modal-target="popup-modal.<?= $movieId ?>" data-modal-toggle="popup-modal.<?= $movieId ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Supprimer</button>
                 </td>
             </tr>
 
