@@ -54,8 +54,8 @@
             <div class="bg-[#1C1A29]/80 p-1 rounded-lg flex  w-full ">
             <div class="flex justify-between w-full mx-10">
                 <div class=" flex flex-col w-full">
-                <div id="etape1" class="hidden"><?php include('./etapeMovie/etape1.php'); ?></div>
-                <div id="etape2" class=""><?php include('./etapeMovie/etape2.php'); ?></div>
+                <div id="etape1" class=""><?php include('./etapeMovie/etape1.php'); ?></div>
+                <div id="etape2" class="hidden"><?php include('./etapeMovie/etape2.php'); ?></div>
                 <div id="etape3" class="hidden"><?php include('./etapeMovie/etape3.php'); ?></div>
                 </div>
             </div>

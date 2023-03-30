@@ -52,7 +52,7 @@
                 ?>
                 
             <?php }else{ ?>  
-                <a href="./connect.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/connect.png" alt="" class=""></a>
+                    <a href="./connect.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/connect.png" alt="" class=""></a>
             <?php } ?>
                 </div>
                 

@@ -83,7 +83,7 @@ $(document).ready(function() {
 
 function createInputs() {
   let container = document.getElementById('test');
-  container.classList.add('flex', 'flex-col','justify-center', 'gap-2');
+  container.classList.add('flex','w-[100%]', 'flex-col','justify-center', 'gap-2');
 
   let resultInput = document.createElement('input');
   resultInput.classList.add('w-[100%]', 'bg-[#5E5E5E]/80', 'rounded-lg');
@@ -96,6 +96,7 @@ function createInputs() {
   roleInput.setAttribute('name', 'roleActor');
   roleInput.setAttribute('type', 'text');
   roleInput.setAttribute('id', 'role');
+  roleInput.setAttribute('placeholder', 'Mettre un role');
 
   let avatarInput = document.createElement('input');
   avatarInput.classList.add('w-[100%]');
