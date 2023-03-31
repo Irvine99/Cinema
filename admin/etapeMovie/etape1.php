@@ -1,4 +1,4 @@
-<form enctype="multipart/form-data" action="../traitement/insertMovie.php" method="post">
+
 
 <div class="">
     <h1 class="mx-2 text-md md:text-2xl">Ajout d'un film</h1>
@@ -25,14 +25,11 @@
         <input name="afficheMovie" id="affiche" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file">
 
     </div>
-    <div class="flex justify-center mt-5">
-        <button class="bg-[#5E5E5E]/80 p-2 rounded-lg mb-5" type="submit">Envoyer</button>
-        
-    </div>
+
 
     
 </div>
-</form>
+
 <div class="flex justify-end w-full mt-10">
-    <button onclick = next1() class="bg-[#5E5E5E]/80 p-2 rounded-lg mb-5">Suivant</button>
+    <a onclick = next1() class="bg-[#5E5E5E]/80 w-[10%] p-2 rounded-lg mb-5">Suivant</a>
 </div>
