@@ -1,6 +1,14 @@
 <?php session_start() ?>
 <?php include('../traitement/function.php') ?>
 
+<?php $Id_movie = $_GET['value'];
+
+
+
+
+?>
+ 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

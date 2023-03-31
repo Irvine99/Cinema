@@ -10,6 +10,7 @@ if($_POST['movieId']) {
 
         if($request->rowCount() > 0) {
             echo "C'est Delete, wesh trop bien, tom paye moi un café";
+            header('Location: ../admin/moviePage.php');
         } else {
             echo "Aucune entrée";
         }

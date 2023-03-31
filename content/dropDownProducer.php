@@ -1,6 +1,6 @@
 
 <button id="buttonProducer" data-dropdown-toggle="searchProducer" 
-class="md:w-[40%] w-[80%]  flex justify-between items-center px-4 py-2 text-sm font-medium  text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+class="md:w-[60%] w-[80%]  flex justify-between items-center px-4 py-2 text-sm font-medium  text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
 type="button">Producteur <svg class=" h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
 
 <!-- Dropdown menu -->
@@ -21,7 +21,7 @@ type="button">Producteur <svg class=" h-4 ml-2" aria-hidden="true" fill="none" s
         foreach ($producers as $producer) { ?>
                 <li>
                 <div class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                <input name="checkProducer" id="checkbox-item-11" type="checkbox" value="<?= $producer['name_producer'] ?>" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                <input onclick =createProducer(this) name="checkProducer[]" id="<?= $producer['name_producer'] ?>" type="checkbox" value="<?= $producer['Id_producer'] ?>" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                 <label for="checkbox-item-11" class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300"><?= $producer['name_producer'] ?></label>
                 </div>
             </li>.

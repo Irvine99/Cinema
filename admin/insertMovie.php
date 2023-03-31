@@ -36,6 +36,7 @@
     <title>Acceuil</title>
 </head>
 <body class="h-screen bg-[url('./../assets/img/wallpaper.jpg')]">
+
     <div class="min-h-full bg-black/70">
      <div class="">
         <a href="./../page/accueil.php"><img src="./../assets/img/back2.png" alt="" class="pt-3 pl-3"></a>
@@ -51,14 +52,18 @@
             <div class="flex justify-center items-center">
              <?php include('../content/stepForm.php'); ?> 
             </div>
+
             <div class="bg-[#1C1A29]/80 p-1 rounded-lg flex py-2 w-[90%] md:w-1/2 ">
-            <div class="flex justify-between w-full mx-10">
+              <div class="flex justify-between w-full mx-10">
                 <div class=" flex flex-col w-full">
+                <form enctype="multipart/form-data" action="../traitement/insertMovieV2.php" method="post"> 
                 <div id="etape1" class=""><?php include('./etapeMovie/etape1.php'); ?></div>
                 <div id="etape2" class="hidden"><?php include('./etapeMovie/etape2.php'); ?></div>
                 <div id="etape3" class="hidden"><?php include('./etapeMovie/etape3.php'); ?></div>
+                </form>
                 </div>
             </div>
+            
         </div>
        
 

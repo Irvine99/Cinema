@@ -1,5 +1,5 @@
 <?php session_start() ?>
-
+<?php include('../traitement/function.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,11 +58,17 @@
                 </div>
                 <div class="mx-2 mt-10">
                     <h1 class="text-2xl mb-2">Partie Formulaire</h1>
-                    <a href="./insertMovie.php"><h3 class="hover:text-blue-500">Inserer un film</h3></a>
+                    <a href="./insertMovie.php"><h3 class="hover:text-blue-500">Ajouter un film</h3></a>
+                    <a href="./insertMovie.php"><h3 class="hover:text-blue-500">Ajouter un acteur</h3></a>
+                    <a href="./insertMovie.php"><h3 class="hover:text-blue-500">Ajouter un producteur/réalisateur</h3></a>
                 </div>
                 
             </div>
-            
+            <?php 
+            $Id_movie = 17;
+            $test = getRelatedData($Id_movie);
+            var_dump($test);
+            ?>
             
         </div>    
      </div>     
