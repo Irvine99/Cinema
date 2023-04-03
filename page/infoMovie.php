@@ -1,8 +1,14 @@
 <?php session_start() ?>
 <?php include('../traitement/function.php') ?>
 
-<?php $Id_movie = $_GET['value'];
+<?php $idMovie = $_GET['value'];
+$movie = infoMovie($idMovie);
 
+$categories = $movie['categories[]'];
+$directors = $movie['directors[]'];
+$producers = $movie['producers[]'];
+$actors = $movie['actors[]'];
+$links = $movie['links[]'];
 
 
 

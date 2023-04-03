@@ -3,15 +3,19 @@
     <div class="flex flex-col">
         <div class="flex gap-1">
             <h3 class="">Date de création : </h3>
-            <h3 class="text-white/80">11/01/1999</h3>
+            <h3 class="text-white/80"><?= $movie['date_sortie_movie'] ?></h3>
         </div>
         <div class="flex gap-1">
             <h3 class="">Réalisateur : </h3>
-            <h3 class="text-white/80">George Doudou</h3>
+            <?php foreach ($directors as $director) {?>
+                <h3 class="text-white/80"><?= $director['name_director'] ?></h3>
+           <?php }?>
         </div>
         <div class="flex gap-1">
             <h3 class="">Producteur : </h3>
-            <h3 class="text-white/80">George Doudou</h3>
+            <?php foreach ($producers as $producer) {?>
+                <h3 class="text-white/80"><?= $producer['name_producer'] ?></h3>
+           <?php }?>
         </div>
         <div class="flex gap-1">
             <h3 class="">Bande original : </h3>
@@ -23,7 +27,7 @@
         </div>
         <div class="flex gap-1">
             <h3 class="">Budget : </h3>
-            <h3 class="text-white/80">3$</h3>
+            <h3 class="text-white/80"><?= $movie['budget_movie'] ?>$</h3>
         </div>
 
     </div>
@@ -35,15 +39,19 @@
     <div class="flex flex-col">
         <div class="flex gap-1">
             <h3 class="">Date de création : </h3>
-            <h3 class="text-white/80">11/01/1999</h3>
+            <h3 class="text-white/80"><?= $movie['date_sortie_movie'] ?></h3>
         </div>
         <div class="flex gap-1">
             <h3 class="">Réalisateur : </h3>
-            <h3 class="text-white/80">George Doudou</h3>
+            <?php foreach ($directors as $director) {?>
+                <h3 class="text-white/80"><?= $director['name_director'] ?></h3>
+           <?php }?>
         </div>
         <div class="flex gap-1">
             <h3 class="">Producteur : </h3>
-            <h3 class="text-white/80">George Doudou</h3>
+            <?php foreach ($producers as $producer) {?>
+                <h3 class="text-white/80"><?= $producer['name_producer'] ?></h3>
+           <?php }?>
         </div>
         <div class="flex gap-1">
             <h3 class="">Bande original : </h3>
@@ -55,7 +63,7 @@
         </div>
         <div class="flex gap-1">
             <h3 class="">Budget : </h3>
-            <h3 class="text-white/80">3$</h3>
+            <h3 class="text-white/80"><?= $movie['budget_movie'] ?>$</h3>
         </div>
 
     </div>
@@ -67,15 +75,19 @@
     <div class="flex flex-col">
         <div class="flex gap-1">
             <h3 class="">Date de création : </h3>
-            <h3 class="text-white/80">11/01/1999</h3>
+            <h3 class="text-white/80"><?= $movie['date_sortie_movie'] ?></h3>
         </div>
         <div class="flex gap-1">
             <h3 class="">Réalisateur : </h3>
-            <h3 class="text-white/80">George Doudou</h3>
+            <?php foreach ($directors as $director) {?>
+                <h3 class="text-white/80"><?= $director['name_director'] ?></h3>
+           <?php }?>
         </div>
         <div class="flex gap-1">
             <h3 class="">Producteur : </h3>
-            <h3 class="text-white/80">George Doudou</h3>
+            <?php foreach ($producers as $producer) {?>
+                <h3 class="text-white/80"><?= $producer['name_producer'] ?></h3>
+           <?php }?>
         </div>
         <div class="flex gap-1">
             <h3 class="">Bande original : </h3>
@@ -87,7 +99,7 @@
         </div>
         <div class="flex gap-1">
             <h3 class="">Budget : </h3>
-            <h3 class="text-white/80">3$</h3>
+            <h3 class="text-white/80"><?= $movie['budget_movie'] ?>$</h3>
         </div>
 
     </div>

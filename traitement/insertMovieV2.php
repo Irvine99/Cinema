@@ -48,7 +48,7 @@ if($_POST) {
                 $extensions = ['png', 'jpg', 'jpeg', 'gif', 'jiff'];
                 $type = ['image/png', 'image/jpg', 'image/jpeg', 'image/gif', 'image/jiff'];
                 $extension = explode('.', $nameFile);
-                $max_size =500000;
+                $max_size =50000000;
                  
                 
                 if(in_array($typeFile, $type))
@@ -106,11 +106,11 @@ if($_POST) {
                                         }
 
                                         
-                                        $insertUrl = "INSERT INTO url_movie (name_url_movie, Id_movie) VALUES (:links, :lastidMovie";
+                                        $insertUrl = "INSERT INTO url_movie (name_url_movie, Id_movie) VALUES (:links, :lastidMovie)";
                                         $urlData = $conn->prepare($insertUrl);
                                         $urlData->execute(['links' => $links, 'lastidMovie' => $lastidMovie]);
                                         
-
+                                        header('Location: ../admin/admin.php'); 
                                                  
                                     } catch (\Exc $th) {
                                         
