@@ -45,7 +45,7 @@
 <div class="mt-20 hidden lg:block">
   <!--Slider-->
 
-
+<h1 class="text-3xl mb-2">Derniere sortie</h1>
 <swiper-container class="mySwiper"  slides-per-view="5"
     space-between="20" free-mode="true">
     <?php 

@@ -480,4 +480,67 @@ function getMovieCategories($id_movie, $pdo) {
     return $categories;
 }
 
+function infoMovie($idMovie) {
+    if(require('access.php')) {
+        
+        $movie = "SELECT * FROM movie
+        WHERE movie.Id_movie = ?";
+        $requestMovie = $conn->prepare($movie);
+        $requestMovie->execute([$idMovie]);
+        $findMovie = $requestMovie->fetch();
+
+
+        $movieActor = "SELECT name_actor, avatar_actor FROM actor
+        INNER JOIN movie_actor ON movie_actor.Id_actor = actor.Id_actor
+        WHERE movie_actor.Id_movie = ?";
+        $requestActor = $conn->prepare($movieActor);
+        $requestActor->execute([$idMovie]);
+        $findActor = $requestActor->fetchALL();
+
+
+        $movieProducer = "SELECT name_producer FROM producer
+        INNER JOIN producer_movie ON producer_movie.Id_producer = producer.Id_producer
+        WHERE producer_movie.Id_movie = ?";
+        $requestProducer = $conn->prepare($movieProducer);
+        $requestProducer->execute([$idMovie]);
+        $findProducer = $requestProducer->fetchALL();
+
+
+        $movieDirector = "SELECT name_director FROM director
+        INNER JOIN movie_director ON movie_director.Id_director = director.Id_director
+        WHERE movie_director.Id_movie = ?";
+        $requestDirector = $conn->prepare($movieDirector);
+        $requestDirector->execute([$idMovie]);
+        $findDirector = $requestDirector->fetchALL();
+ 
+
+        $movieCategorie = "SELECT name_category FROM category
+        INNER JOIN movie_category ON movie_category.Id_category = category.Id_category
+        WHERE movie_category.Id_movie = ?";
+        $requestCategorie = $conn->prepare($movieCategorie);
+        $requestCategorie->execute([$idMovie]);
+        $findCategorie = $requestCategorie->fetchALL();
+        
+        $movieVideo = "SELECT name_url_movie FROM url_movie
+        WHERE url_movie.Id_movie = ?";
+        $requestVideo = $conn->prepare($movieVideo);
+        $requestVideo->execute([$idMovie]);
+        $findVideo = $requestVideo->fetchALL();
+    
+
+        $dataMovie = $findMovie;
+        
+        return $dataMovie += [
+            'actors[]' => $findActor,
+            'producers[]' => $findProducer,
+            'directors[]' => $findDirector,
+            'categories[]' => $findCategorie,
+            'links[]' => $findVideo,  
+        ]; 
+        
+        
+    }
+}
+
+
 ?>

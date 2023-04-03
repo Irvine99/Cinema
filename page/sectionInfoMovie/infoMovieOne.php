@@ -19,12 +19,12 @@
                         <div class="flex gap-3">
                             <img class="w-[25px] h-[25px]" src="./../assets/img/tags.png" alt="" class="">
                             <li class="flex flex-row gap-2">
-                                <?php
-                                foreach ($movie['categories'] as $categorie) { ?>
-                                    <ul class="text-white/80 text-md font-light"><?= $categorie ?></ul>
-                                <?php } ?> 
-                                
-                                ?>
+                            <?php
+                            
+                            foreach ($categories as $categorie) { ?>
+                                <ul class="text-white/80 text-sm font-light"><?= $categorie['name_category'] ?></ul>
+                           <?php }
+                            ?>
                             </li>
                         </div>
 
@@ -66,8 +66,12 @@
                     <div class="flex gap-2">
                         <img class="w-[25px] h-[25px]" src="./../assets/img/tags.png" alt="" class="">
                         <li class="flex flex-row gap-2">
-                            <ul class="text-white/80 text-sm font-light">.Action</ul>
-                            <ul class="text-white/80  text-sm font-thin">.Anime</ul>
+                        <?php
+                            
+                            foreach ($categories as $categorie) { ?>
+                                <ul class="text-white/80 text-sm font-light"><?= $categorie['name_category'] ?></ul>
+                           <?php }
+                            ?>
                         </li>
                     </div>
 
@@ -110,8 +114,13 @@
                     <div class="flex gap-2">
                         <img class="w-[25px] h-[25px]" src="./../assets/img/tags.png" alt="" class="">
                         <li class="flex flex-row gap-2">
-                            <ul class="text-white/80 text-sm font-light">.Action</ul>
-                            <ul class="text-white/80  text-sm font-thin">.Anime</ul>
+                            <?php
+                            
+                            foreach ($categories as $categorie) { ?>
+                                <ul class="text-white/80 text-sm font-light"><?= $categorie['name_category'] ?></ul>
+                           <?php }
+                            ?>
+                     
                         </li>
                     </div>
 
