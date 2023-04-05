@@ -26,8 +26,8 @@ if ($_POST) {
 
         if (empty($emailFind)) {
 
-            $insertForm = "INSERT INTO users (username, name, email, password, )
-                VALUES (:username, :name, :email, :password,) ";
+            $insertForm = "INSERT INTO users (username, name, email, password)
+                VALUES (:username, :name, :email, :password) ";
 
             $insertData = $conn->prepare($insertForm);
             $insertData->execute([

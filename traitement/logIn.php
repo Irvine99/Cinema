@@ -28,7 +28,7 @@ if($_POST) {
             $_SESSION['role'] = $passwordFind['Id_role'];
              
 
-            $data['success'] = 'Vous êtes bien connecter';
+            $data['success'] = 'Vous êtes bien connecter'.'<br>'.'Vous serez rediriger dans 3 secondes';
             
 
         }else{

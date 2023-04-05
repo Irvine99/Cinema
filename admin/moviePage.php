@@ -1,3 +1,4 @@
+
 <?php session_start() ?>
 <?php require('../traitement/function.php') ?>
 
@@ -32,8 +33,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
     <!--Swiper-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
 
     <title>Acceuil</title>
 </head>
@@ -68,7 +71,7 @@
                                     placeholder="Search for items">
                             </div>
                         </div>
-                        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                        <table class="w-full text-sm text-left text-white dark:text-gray-400">
                             <thead
                                 class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr>
@@ -107,15 +110,29 @@
                                 <?php
 
                                 $movies = searchMovie();
+                                // $actorss = searchActor();
+                                // var_dump($actorss);
+                                // $dataActor = OneActor();
+                                
+                                
+                                
+                                
 
-
-
+                                
                                 foreach ($movies as $movie) {
                                     $movieId = $movie['Id_movie'];
+                                    
+                                    
+                                    $dataMovie = infoMovie($movieId);
+                                    $actors = searchActors($movieId);
+                                    
+                                    
+                                   
+                           
 
                                     ?>
                                     <tr
-                                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                        class="bg-[#5E5E5E]/70 border-b border-bg-[#5E5E5E]/80 hover:bg-[#5E5E5E]/90">
                                         <td class="w-4 p-4">
                                             <div class="flex items-center">
                                                 <input id="checkbox-table-search-1" type="checkbox"
@@ -124,7 +141,7 @@
                                             </div>
                                         </td>
                                         <th scope="row"
-                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white">
                                             <?= $movieId ?>
                                         </th>
                                         <td class="px-6 py-4">
@@ -132,8 +149,9 @@
                                         </td>
 
                                         <td class="px-6 py-4">
-                                            <a href="./infoMovie.php?value=<?php echo urlencode($movieId); ?>"
-                                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                        <button data-modal-target="authentication-modal" data-modal-id="authentication-modal" data-movie-id="<?= $movieId ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline open-modal" type="button">
+                                        Edit
+                                        </button>
                                         </td>
                                         <td class="px-6 py-4">
                                             <button data-modal-target="popup-modal.<?= $movieId ?>"
@@ -186,6 +204,13 @@
                                         </div>
                                     </div>
 
+                                    
+                                    <!-- Modal toggle -->
+                                  
+                                   
+                                   
+
+
                                 <?php } ?>
                             </tbody>
                         </table>
@@ -196,7 +221,19 @@
             </div>
         </div>
     </div>
-    <!--modal delete-->
+
+
+
+<!-- Main modal -->
+<div id="authentication-modal" tabindex="-1" aria-hidden="true"
+    class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+    <div class="relative w-full h-4/5 max-w-full md:h-[90%]" id="modal-container">
+        <!-- Modal content -->
+    </div>
+</div>
+
+
+
 
 
 
@@ -207,5 +244,9 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
     crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+<script src="../assets/js/modal.js"></script>
+
+
 
 </html>

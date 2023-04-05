@@ -52,18 +52,22 @@
         <div class="bg-[#1C1A29]/80 p-1 rounded-lg md:w-1/2 lg:w-1/3 w-3/4">
             <div class="">
                 <div class="mx-2">
-                    <h1 class="text-2xl mb-2">Partie Administrative</h1>
+                    <h1 class="text-white text-2xl mb-2">Partie Administrative</h1>
                     
                     <a href="./userPage.php"><h3 class="hover:text-blue-500">Voir les Utlisateurs</h3></a>
                     <a href="./moviePage.php"><h3 class="hover:text-blue-500">Voir les Films</h3></a>
                 </div>
                 <div class="mx-2 mt-10">
-                    <h1 class="text-2xl mb-2">Partie Formulaire</h1>
-                    <a href="./insertMovie.php"><h3 class="hover:text-blue-500">Ajouter un film</h3></a>
-                    <a href="./insertActor.php"><h3 class="hover:text-blue-500">Ajouter un acteur</h3></a>
-                    <a href="./insertMovie.php"><h3 class="hover:text-blue-500">Ajouter un producteur/réalisateur</h3></a>
+                    <h1 class="text-white  text-2xl mb-2">Partie Formulaire</h1>
+                    <a href="./insertMovie.php"><h3 class="text-white  hover:text-blue-500">Ajouter un film</h3></a>
+                    <a href="./insertActor.php"><h3 class="text-white  hover:text-blue-500">Ajouter un acteur</h3></a>
+                    <a href="./insertMovie.php"><h3 class="text-white  hover:text-blue-500">Ajouter un producteur/réalisateur</h3></a>
 
 
+                </div>
+                <h1 class="mt-7 mb-2 text-xl mb-7 font-bold py-2 text-center">Vous deconnecter</h1>
+                <div class="mb-3 flex justify-start mx-2 flex gap-1">
+                <a  class ="bg-[#E82626] text-white py-1 px-4 rounded-lg" href="../traitement/logOut.php">Deconnection</a>
                 </div>
  
             </div>

@@ -85,13 +85,13 @@
                         <input class="rounded-lg w-2/3 bg-[#5E5E5E]" type="password" name="password" id="password"
                             required="requise">
                     </div>
-                    <div class="">
+                    <div class="text-white">
                         <ul class="flex flex-col items-start ml-[17%] my-5">
-                            <li class="capi text-red-500">1 lettre capitale</li>
-                            <li class="lower text-red-500">1 lettre miniscule</li>
-                            <li class="number text-red-500">1 nombre</li>
-                            <li class="special text-red-500">1 caractére spécial</li>
-                            <li class="eightMin text-red-500">Au moins 8 caractéres</li>
+                            <div class="capi text-red-500">1 lettre capitale</div>
+                            <div class="lower text-red-500">1 lettre miniscule</div>
+                            <div class="number text-red-500">1 nombre</div>
+                            <div class="special text-red-500">1 caractére spécial</div>
+                            <div class="eightMin text-red-500">Au moins 8 caractéres</div>
                         </ul>
                     </div>
                     <div id="password-group" class="mt-5 flex flex-col items-center gap-1">

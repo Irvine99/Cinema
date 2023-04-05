@@ -13,6 +13,12 @@ async function ajax(){
         _form.parentNode.removeChild(_form);
         document.getElementById('success').innerHTML = msg['success'];
         document.getElementById('successMsg').classList.remove('hidden');
+        console.log('Reussi');
+        setTimeout(function() {
+          window.location.href = "/portfolioV3/projets/cinema/page/accueil.php"; // Rediriger vers la page de connexion après 3 secondes
+        }, 3000);
+        
+ // rediriger après 3 secondes
     } else {
       document.getElementById('error').innerHTML = msg['error'];
       document.getElementById('errorMsg').classList.remove('hidden');
