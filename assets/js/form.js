@@ -41,6 +41,9 @@ $('#password').on('keyup', function() {
       _form.parentNode.removeChild(_form);
       document.getElementById('success').innerHTML = msg['success'];
       document.getElementById('successMsg').classList.remove('hidden');
+      setTimeout(function() {
+        window.location.href = "/portfolioV3/projets/cinema/page/connect.php"; // Rediriger vers la page de connexion après 3 secondes
+      }, 3000);
   } else {
     document.getElementById('error').innerHTML = msg['error'];
     document.getElementById('errorMsg').classList.remove('hidden');

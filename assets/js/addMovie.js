@@ -1,7 +1,7 @@
 async function ajax(){
     let formData = new FormData(form);
     
-    let res = await fetch('/portfolioV3/projets/cinema/traitement/login.php', 
+    let res = await fetch('/portfolioV3/projets/cinema/traitement/insertMovieV2.php', 
      {
             method: 'POST',
             body: formData,
@@ -13,12 +13,9 @@ async function ajax(){
         _form.parentNode.removeChild(_form);
         document.getElementById('success').innerHTML = msg['success'];
         document.getElementById('successMsg').classList.remove('hidden');
-        console.log('Reussi');
         setTimeout(function() {
-          window.location.href = "/portfolioV3/projets/cinema/page/accueil.php"; // Rediriger vers la page de connexion après 3 secondes
+          window.location.href = "/portfolioV3/projets/cinema/admin/admin.php"; // Rediriger vers la page de connexion après 3 secondes
         }, 3000);
-        
- // rediriger après 3 secondes
     } else {
       document.getElementById('error').innerHTML = msg['error'];
       document.getElementById('errorMsg').classList.remove('hidden');
@@ -34,5 +31,4 @@ async function ajax(){
   form.onsubmit = (e) => {
     ajax();
     e.preventDefault();
-    
   }

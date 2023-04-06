@@ -31,12 +31,44 @@ function movieIdCompare($idMovieGet){
         exit;
     }
 }
+function sameMovieCat(){
+    if(require('access.php')) {
+        
+        $movieId = "SELECT * FROM movie where Id_movie = $idMovieGet";
+        $movieIdRequest = $conn->prepare($movieId);
+        $movieIdRequest->execute();
+        $movieIdFind = $movieIdRequest->fetch();
+        
+        return $movieIdFind;
+    
+       
+        exit;
+    }
+}
 
 function movieAll() {
 
     if(require('access.php')) {
 
-    $movieName = "SELECT * FROM movie ";
+    $movieName = "SELECT * FROM movie ORDER BY Id_movie DESC ";
+    $movieRequest = $conn->prepare($movieName);
+    $movieRequest->execute();
+    $movieFind = $movieRequest->fetchAll();
+    
+    return $movieFind;
+
+   
+    exit;
+
+    }
+}
+function movieSameCat($Id_category) {
+
+    if(require('access.php')) {
+
+    $movieName = "SELECT * FROM movie 
+    INNER JOIN movie_category ON movie_category.Id_category = category.Id_category
+    WHERE movie_category.Id_category = ?";
     $movieRequest = $conn->prepare($movieName);
     $movieRequest->execute();
     $movieFind = $movieRequest->fetchAll();
@@ -132,7 +164,7 @@ function movieTable() {
 }
 
 function insertMovie() {
-
+    require('access.php');
     $insertForm = "INSERT INTO movie (name_movie, description_movie, date_sortie_movie, budget_movie, affiche_movie)
     VALUES (?;?.?;?,?";
 
@@ -228,9 +260,21 @@ function searchCategorie() {
         exit;
     }
 }
+
+function movieCategorie($idCat) {
+    if(require('access.php')) {
+        $cate = "SELECT * FROM category ORDER BY name_category ";
+        $requestCate = $conn->prepare($cate);
+        $requestCate->execute();
+        $findCate = $requestCate->fetchALL();
+
+        return $findCate;
+        exit;
+    }
+}
 function searchMovie() {
     if(require('access.php')) {
-        $movie = "SELECT * FROM movie ORDER BY name_movie";
+        $movie = "SELECT * FROM movie ORDER BY Id_movie";
         $requestmovie = $conn->prepare($movie);
         $requestmovie->execute();
         $findmovie = $requestmovie->fetchALL();
@@ -253,6 +297,72 @@ function searchProducer() {
 }
 
 
+function searchMovies($idMovie) {
+    if(require('access.php')) {
+        $movies = "SELECT movie.*, mc.Id_category IS NOT NULL AS lie_au_film
+        FROM movie
+        LEFT JOIN movie_category mc ON movie.Id_movie = mc.Id_category AND mc.Id_category = ?";
+        $requestactor = $conn->prepare($movies);
+        $requestactor->execute([$idMovie]);
+        $findactor = $requestactor->fetchALL();
+
+        return $findactor;
+        exit;
+    }
+}
+
+function searchActors($idMovie) {
+    if(require('access.php')) {
+        $actor = "SELECT actor.*, ma.Id_movie IS NOT NULL AS lie_au_film
+        FROM actor
+        LEFT JOIN movie_actor ma ON actor.Id_actor = ma.Id_actor AND ma.Id_movie = ?";
+        $requestactor = $conn->prepare($actor);
+        $requestactor->execute([$idMovie]);
+        $findactor = $requestactor->fetchALL();
+
+        return $findactor;
+        exit;
+    }
+}
+function searchProducers($idMovie) {
+    if(require('access.php')) {
+        $producers = "SELECT producer.*, pm.Id_movie IS NOT NULL AS lie_au_film
+        FROM producer
+        LEFT JOIN producer_movie pm ON producer.Id_producer = pm.Id_producer AND pm.Id_movie = ?";
+        $requestProducer = $conn->prepare($producers);
+        $requestProducer->execute([$idMovie]);
+        $findProducer = $requestProducer->fetchALL();
+
+        return $findProducer;
+        exit;
+    }
+}
+function searchDirectors($idMovie) {
+    if(require('access.php')) {
+        $directors = "SELECT director.*, md.Id_movie IS NOT NULL AS lie_au_film
+        FROM director
+        LEFT JOIN movie_director md ON director.Id_director = md.Id_director AND md.Id_movie = ?";
+        $requestDirector = $conn->prepare($directors);
+        $requestDirector->execute([$idMovie]);
+        $findDirector = $requestDirector->fetchALL();
+
+        return $findDirector;
+        exit;
+    }
+}
+function searchCategories($idMovie) {
+    if(require('access.php')) {
+        $categories = "SELECT category.*, mc.Id_movie IS NOT NULL AS lie_au_film
+        FROM category
+        LEFT JOIN movie_category mc ON category.Id_category = mc.Id_category AND mc.Id_movie = ?";
+        $requestCategory = $conn->prepare($categories);
+        $requestCategory->execute([$idMovie]);
+        $findCategory = $requestCategory->fetchALL();
+
+        return $findCategory;
+        exit;
+    }
+}
 function searchActor() {
     if(require('access.php')) {
         $actor = "SELECT * FROM actor ORDER BY name_actor";
@@ -264,6 +374,22 @@ function searchActor() {
         exit;
     }
 }
+
+// function OneActor() {
+//     $actors = searchActor();
+    
+//     foreach ($actors as $actor) {
+        
+//         $actorName = [
+//             'actor_name' => $actor['actor_name'],
+//             'Id_actor' => $actor['Id_actor'],
+//         ];
+        
+        
+//     }
+    
+//     return $actorName;
+// }
 
 
 function searchDirector() {
@@ -490,7 +616,7 @@ function infoMovie($idMovie) {
         $findMovie = $requestMovie->fetch();
 
 
-        $movieActor = "SELECT name_actor, avatar_actor FROM actor
+        $movieActor = "SELECT * FROM actor
         INNER JOIN movie_actor ON movie_actor.Id_actor = actor.Id_actor
         WHERE movie_actor.Id_movie = ?";
         $requestActor = $conn->prepare($movieActor);
@@ -498,7 +624,7 @@ function infoMovie($idMovie) {
         $findActor = $requestActor->fetchALL();
 
 
-        $movieProducer = "SELECT name_producer FROM producer
+        $movieProducer = "SELECT * FROM producer
         INNER JOIN producer_movie ON producer_movie.Id_producer = producer.Id_producer
         WHERE producer_movie.Id_movie = ?";
         $requestProducer = $conn->prepare($movieProducer);
@@ -506,7 +632,7 @@ function infoMovie($idMovie) {
         $findProducer = $requestProducer->fetchALL();
 
 
-        $movieDirector = "SELECT name_director FROM director
+        $movieDirector = "SELECT * FROM director
         INNER JOIN movie_director ON movie_director.Id_director = director.Id_director
         WHERE movie_director.Id_movie = ?";
         $requestDirector = $conn->prepare($movieDirector);
@@ -514,14 +640,14 @@ function infoMovie($idMovie) {
         $findDirector = $requestDirector->fetchALL();
  
 
-        $movieCategorie = "SELECT name_category FROM category
+        $movieCategorie = "SELECT * FROM category
         INNER JOIN movie_category ON movie_category.Id_category = category.Id_category
         WHERE movie_category.Id_movie = ?";
         $requestCategorie = $conn->prepare($movieCategorie);
         $requestCategorie->execute([$idMovie]);
         $findCategorie = $requestCategorie->fetchALL();
         
-        $movieVideo = "SELECT name_url_movie FROM url_movie
+        $movieVideo = "SELECT * FROM url_movie
         WHERE url_movie.Id_movie = ?";
         $requestVideo = $conn->prepare($movieVideo);
         $requestVideo->execute([$idMovie]);
@@ -542,5 +668,7 @@ function infoMovie($idMovie) {
     }
 }
 
-
+// SELECT actor.*, ma.Id_movie IS NOT NULL AS lie_au_film
+// FROM actor
+// LEFT JOIN movie_actor ma ON actor.Id_actor = ma.Id_actor AND ma.Id_movie = 1
 ?>

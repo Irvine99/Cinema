@@ -30,7 +30,7 @@
     <?php 
     $movies = movieAll();
     foreach ($movies as $movie) { ?>
-      <swiper-slide><a href="./infoMovie.php?value=<?php echo urlencode($movie['Id_movie']);?>"><img class="w-auto h-[10%]" src="<?= $movie['affiche_movie'] ?>" alt="" class=""></a></swiper-slide>
+      <swiper-slide><a href="./infoMovie.php?value=<?php echo urlencode($movie['Id_movie']);?>"><img class="w-auto h-[30vh]" src="<?= $movie['affiche_movie'] ?>" alt="" class=""></a></swiper-slide>
     <?php } ?>
 
 
@@ -51,7 +51,7 @@
     <?php 
     $movies = movieAll();
     foreach ($movies as $movie) { ?>
-      <swiper-slide><a href="./infoMovie.php?value=<?php echo urlencode($movie['Id_movie']);?>"><img class="w-auto h-[10%]" src="<?= $movie['affiche_movie'] ?>" alt="" class=""></a></swiper-slide>
+      <swiper-slide><a href="./infoMovie.php?value=<?php echo urlencode($movie['Id_movie']);?>"><img class="w-auto h-[30vh] xl:h-[45vh]" src="<?= $movie['affiche_movie'] ?>" alt="" class=""></a></swiper-slide>
     <?php } ?>
 
     </swiper-container>

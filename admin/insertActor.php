@@ -41,7 +41,7 @@
 <body class="h-screen bg-[url('./../assets/img/wallpaper.jpg')]">
     <div class="min-h-full bg-black/70">
         <div class="">
-            <a href="./admin.php"><img src="./../assets/img/back2.png" alt="" class="pt-3 pl-3"></a>
+            <a href="./admin.php"><div class=" p-4"><img class="w-[25px] h-[25px]" src="./../assets/img/back2.png" alt=""></div></a>
         </div>
         <div class="py-5 flex flex-col justify-center items-center">
             <img class="rounded-full h-[150px] w-[150px]" src="./../assets/img/pikahead.jpg" alt="">
@@ -82,8 +82,8 @@
 
                             </div>
                         </div>
-                        <label for="table-search" class=" bg sr-only">Search</label>
-                        <div class="mt-2 mx-2 relative">
+                        <label for="table-search" class=" sr-only">Search</label>
+                        <div class="hidden md:block mt-2 mx-2 relative">
                             <div class=" absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                                 <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true"
                                     fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +99,7 @@
                     </div>
                     <table class="bg-[#1C1A29]/80 flex flex-col w-full text-sm text-left  ">
                         <thead class=" text-xs uppercase bg-gray-50 ">
-                            <tr class="bg-[#1C1A29]/70 items-center flex justify-between">
+                            <tr class="bg-[#1C1A29] items-center flex justify-between">
                                 <th scope="col" class="p-4">
                                     <div class="flex items-center">
                                         <input id="text-white checkbox-all-search" type="checkbox"
@@ -127,8 +127,8 @@
 
 
                                  ?>
-                                <tr
-                                class="flex w-full bg-[#5E5E5E]/80 ">
+                            <tr
+                                class="flex flex-col md:flex-row items-center w-full bg-[#5E5E5E]/60 ">
                                 <td class="flex justify-start items-center p-4">
                                     <div class="flex ">
                                         <input id="checkbox-table-search-1" type="checkbox"
@@ -141,14 +141,14 @@
                                     <img class="w-10 h-10 rounded-full" src="<?= $actor['avatar_actor'] ?>"
                                         alt="<?= $actor['name_actor'] ?>">
                                     <div class="pl-3">
-                                        <div class="text-base font-semibold"><?= $actor['name_actor'] ?></div>
+                                        <div class="text-base text-white font-semibold"><?= $actor['name_actor'] ?></div>
 
                                     </div>
                                 </th>
 
-                                <td class="mr-10 flex items-center gap-4 text-white ">
+                                <td class="md:mr-10 flex justify-center items-center gap-4 text-white ">
                                 <button  data-modal-target="popup-modal-modif.<?= $actor['Id_actor'] ?>" data-modal-toggle="popup-modal-modif.<?= $actor['Id_actor'] ?>" type='button' id="popup-modal-modif" class="rounded-lg w-2/3 bg-blue-500 py-1 px-4">Modifier</button>
-                                    <button  data-modal-target="popup-modal.<?= $actor['Id_actor'] ?>" data-modal-toggle="popup-modal.<?= $actor['Id_actor'] ?>" type='button' id="popup-modal" class="rounded-lg w-2/3 bg-red-500 py-1 px-4">Supprimer</button>
+                                <button  data-modal-target="popup-modal.<?= $actor['Id_actor'] ?>" data-modal-toggle="popup-modal.<?= $actor['Id_actor'] ?>" type='button' id="popup-modal" class="rounded-lg w-2/3 bg-red-500 py-1 px-4">Supprimer</button>
                                 </td>
 
                             </tr>

@@ -2,7 +2,7 @@
 
 :root{
     font-family: "Roboto";
-    color: white;
+    color: white!important;
 }
 body{
     color: white;
@@ -10,4 +10,16 @@ body{
 
 .password_required{} .password_require ul{
     color:red;
+}
+
+.color{
+    color: black!important;
+}
+
+li{
+    color: black!important;
+}
+
+.mult-select-tag .drawer ul li {
+    color:black!important;
 }

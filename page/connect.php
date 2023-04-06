@@ -35,7 +35,7 @@
 </head>
 <body class="h-screen bg-[url('./../assets/img/wallpaper.jpg')]">
     <div class="h-full bg-black/70">
-    <a href="./accueil.php"><div class=" p-4"><img class="w-[25px] h-[25px]"src="./../assets/img/back2.png" alt=""></div></a>
+    <a href="./accueil.php"><div class=" p-4"><img class="w-[25px] h-[25px]" src="./../assets/img/back2.png" alt=""></div></a>
     <div class="flex justify-center items-center"><img src="./../assets/img/Logo.png" alt="" class=""></div>
       <div id='successMsg' class="hidden flex justify-center">
         <div id='success' class=" w-1/2 text-black font-bold text-center p-2 bg-lime-500 rounded-lg"></div>
