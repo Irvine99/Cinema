@@ -44,7 +44,7 @@
 <body class="h-screen bg-[url('./../assets/img/wallpaper.jpg')]">
     <div class="min-h-full bg-black/70">
         <div class="">
-            <a href="./admin.php"><img src="./../assets/img/back2.png" alt="" class="pt-3 pl-3"></a>
+            <a href="./admin.php"><div class=" p-4"><img class="w-[25px] h-[25px]" src="./../assets/img/back2.png" alt=""></div></a>
         </div>
         <div class="py-5 flex flex-col justify-center items-center">
             <img class="rounded-full h-[150px] w-[150px]" src="./../assets/img/pikahead.jpg" alt="">
@@ -59,7 +59,7 @@
                             <label for="table-search" class="sr-only">Search</label>
                             <div class="relative">
                                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                    <svg class="w-5 h-5 text-white " aria-hidden="true"
                                         fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
@@ -67,13 +67,13 @@
                                     </svg>
                                 </div>
                                 <input type="text" id="table-search"
-                                    class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    class="block p-2 pl-10 text-sm text-white border border-gray-300 rounded-lg w-80 bg-[#5E5E5E]/70 focus:ring-blue-500 "
                                     placeholder="Search for items">
                             </div>
                         </div>
-                        <table class="w-full text-sm text-left text-white dark:text-gray-400">
+                        <table class="w-full text-sm text-left text-white ">
                             <thead
-                                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                class="text-xs text-white border-1- border-b-[#1C1A29] uppercase bg-[#5E5E5E]/70 ">
                                 <tr>
                                     <th scope="col" class="p-4">
                                         <div class="flex items-center">
@@ -132,11 +132,11 @@
 
                                     ?>
                                     <tr
-                                        class="bg-[#5E5E5E]/70 border-b border-bg-[#5E5E5E]/80 hover:bg-[#5E5E5E]/90">
+                                        class="bg-[#5E5E5E]/70 border-b border-[#1C1A29]/80 hover:bg-[#5E5E5E]/90">
                                         <td class="w-4 p-4">
                                             <div class="flex items-center">
                                                 <input id="checkbox-table-search-1" type="checkbox"
-                                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                    class="w-4 h-4 text-blue-600 bg-gray-100  border-bg-[#1C1A29]/80 rounded ">
                                                 <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
                                             </div>
                                         </td>
@@ -149,14 +149,14 @@
                                         </td>
 
                                         <td class="px-6 py-4">
-                                        <button data-modal-target="authentication-modal" data-modal-id="authentication-modal" data-movie-id="<?= $movieId ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline open-modal" type="button">
+                                        <button data-modal-target="authentication-modal" data-modal-id="authentication-modal" data-movie-id="<?= $movieId ?>" class="bg-blue-500 py-1 rounded-lg px-12 open-modal hover:bg-blue-800" type="button">
                                         Edit
                                         </button>
                                         </td>
                                         <td class="px-6 py-4">
                                             <button data-modal-target="popup-modal.<?= $movieId ?>"
                                                 data-modal-toggle="popup-modal.<?= $movieId ?>"
-                                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Supprimer</button>
+                                                class="bg-red-500 py-1 px-8 rounded-lg">Supprimer</button>
                                         </td>
                                     </tr>
 
@@ -227,7 +227,7 @@
 <!-- Main modal -->
 <div id="authentication-modal" tabindex="-1" aria-hidden="true"
     class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
-    <div class="relative w-full h-4/5 max-w-full md:h-[90%]" id="modal-container">
+    <div class="relative w-full h-4/5 max-w-[80%] mx-auto md:h-[90%]" id="modal-container">
         <!-- Modal content -->
     </div>
 </div>

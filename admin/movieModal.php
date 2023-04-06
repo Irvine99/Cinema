@@ -19,7 +19,7 @@ $categories = searchCategories($idMovie);
 
 
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-[#1C1A29]/90 rounded-lg shadow dark:bg-gray-700">
             <button type="button"
                 class="close-modal absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
                 data-modal-hide="authentication-modal">
@@ -32,16 +32,16 @@ $categories = searchCategories($idMovie);
                 <span class=" sr-only">Close modal</span>
             </button>
             <div class="w-full px-6 py-6 lg:px-8">
-                <h3 class="text-center mb-4 text-xl font-medium text-gray-900 dark:text-white">Modifier le film :
+                <h3 class="text-center mb-4 text-xl font-medium text-white dark:text-white">Modifier le film :
                     <?= $movie['name_movie'] ?>
                 </h3>
                 <form enctype="multipart/form-data" class="w-full space-y-6" action="../traitement/updateMovie.php"
                     method='post'>
-                    <div class="flex justify-evenly w-full ">
+                    <div class="flex flex-col md:flex-row md:justify-evenly w-full ">
                         <div class="flex flex-col">
                             <div>
                                 <label for="text"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nom du
+                                    class="block mb-2 text-sm font-medium text-white">Nom du
                                     film</label>
                                 <input type="text" name="movieTitle" id="movieTitle"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
@@ -49,7 +49,7 @@ $categories = searchCategories($idMovie);
                             </div>
                             <div>
                                 <label for="text"
-                                    class="block my-2 text-sm font-medium text-gray-900 dark:text-white">Le resumé du
+                                    class="block my-2 text-sm font-medium text-white">Le resumé du
                                     film</label>
                                 <textarea
                                     class="w-full   bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg"
@@ -59,7 +59,7 @@ $categories = searchCategories($idMovie);
                             <div class="flex">
                                 <div>
                                     <label for="text"
-                                        class="block my-2 text-sm font-medium text-gray-900 dark:text-white">L'affiche
+                                        class="block my-2 text-sm font-medium text-white">L'affiche
                                         du film</label>
                                     <img class="my-2 border-gray border-2 h-auto w-32"
                                         src="<?= $movie['affiche_movie'] ?>" alt="">
@@ -70,7 +70,7 @@ $categories = searchCategories($idMovie);
                             </div>
                             <div>
                                 <label for="text"
-                                    class="block my-2 text-sm font-medium text-gray-900 dark:text-white">Budget du
+                                    class="block my-2 text-sm font-medium text-white">Budget du
                                     film</label>
                                 <input type="number" name="budgetMovie" id="budgetMovie"
                                     placeholder="<?= $movie['budget_movie'] ?>"
@@ -78,7 +78,7 @@ $categories = searchCategories($idMovie);
                             </div>
                             <div>
                                 <label for="text"
-                                    class="block my-2 text-sm font-medium text-gray-900 dark:text-white">date de
+                                    class="block my-2 text-sm font-medium text-white">date de
                                     sortie</label>
                                 <input type="time" name="timeMovie" id="timeMovie"
                                     placeholder="<?= $movie['date_sortie_movie'] ?>"
@@ -86,7 +86,7 @@ $categories = searchCategories($idMovie);
                             </div>
                             <div>
                                 <label for="text"
-                                    class="block my-2 text-sm font-medium text-gray-900 dark:text-white">date de
+                                    class="block my-2 text-sm font-medium text-white">date de
                                     sortie</label>
                                 <input type="selected" name="timeMovie" id="timeMovie"
                                     placeholder="<?= $movie['date_sortie_movie'] ?>"
@@ -97,7 +97,7 @@ $categories = searchCategories($idMovie);
                         <div class="flex gap-8 flex-col">
                             <div>
                                 <label for="text"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Acteur</label>
+                                    class="block mb-2 text-sm font-medium text-white">Acteur</label>
                                 <select class="text-black-500" name="actors[]" id="actors" multiple>
                                     <?php
 
@@ -117,7 +117,7 @@ $categories = searchCategories($idMovie);
                             </div>
                             <div>
                                 <label for="text"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Réalisateurs</label>
+                                    class="block mb-2 text-sm font-medium text-white">Réalisateurs</label>
                                 <select class="text-black-500" name="directors[]" id="directors" multiple>
                                     <?php
                                     
@@ -137,7 +137,7 @@ $categories = searchCategories($idMovie);
                             </div>
                             <div>
                                 <label for="text"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Producteurs</label>
+                                    class="block mb-2 text-sm font-medium text-white">Producteurs</label>
                                 <select class="text-black-500" name="producers[]" id="producers" multiple>
                                     <?php
                                     
@@ -157,7 +157,7 @@ $categories = searchCategories($idMovie);
                             </div>
                             <div>
                                 <label for="text"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Categories</label>
+                                    class="block mb-2 text-sm font-medium text-white">Categories</label>
                                 <select class="text-black-500" name="categories[]" id="categories" multiple>
                                     <?php
                                     

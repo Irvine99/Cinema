@@ -13,7 +13,7 @@
                         <a href="./profil.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/henrycavil.jpg"
                                 alt="" class=""></a>
                     <?php } elseif ($_SESSION['role'] == 2) { ?>
-                        <a href="./admin.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/pikahead.jpg"
+                        <a href="../admin/admin.php"><img class="rounded-full h-[50px] w-[50xp]" src="./../assets/img/pikahead.jpg"
                                 alt="" class=""></a>
                     <?php }
                     ?>

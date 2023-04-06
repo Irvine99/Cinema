@@ -31,5 +31,5 @@
 </div>
 
 <div class="flex justify-end w-full mt-10">
-    <a onclick = next1() class="bg-[#5E5E5E]/80 w-[10%] p-2 rounded-lg mb-5">Suivant</a>
+    <a onclick = next1() class="cursor-pointer bg-[#5E5E5E]/80 w-[10%] py-1 px-4  w-[30%] lg:w-[15%]  rounded-lg text-center mb-5">Suivant</a>
 </div>

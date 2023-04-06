@@ -32,9 +32,9 @@
 
 <div class="flex">
 <div class="flex justify-start w-full mt-10">
-    <a onclick = back1() class="bg-[#5E5E5E]/80 p-2 rounded-lg mb-5 w-[30%]">Back</a>
+    <a onclick = back1() class="cursor-pointer bg-[#5E5E5E]/80 py-1 px-4 text-center rounded-lg mb-5 w-[65%] ] lg:w-[30%]">Back</a>
 </div>
 <div class="flex justify-end w-full mt-10">
-    <a onclick = next2() class="bg-[#5E5E5E]/80 p-2 rounded-lg mb-5  w-[30%]">Suivant</a>
+    <a onclick = next2() class="cursor-pointer bg-[#5E5E5E]/80 py-1 px-4 rounded-lg mb-5 text-center w-[65%] lg:w-[30%]">Suivant</a>
 </div>
 </div>

@@ -39,7 +39,7 @@
 
     <div class="min-h-full bg-black/70">
      <div class="">
-        <a href="./../page/accueil.php"><img src="./../assets/img/back2.png" alt="" class="pt-3 pl-3"></a>
+        <a href="./admin.php"><div class=" p-4"><img class="w-[25px] h-[25px]" src="./../assets/img/back2.png" alt=""></div></a>
      </div>   
      <div class="py-5 flex flex-col justify-center items-center">
 
@@ -56,6 +56,9 @@
             <div class="bg-[#1C1A29]/80 p-1 rounded-lg flex py-2 w-[90%] md:w-1/2 ">
               <div class="flex justify-between w-full mx-10">
                 <div class=" flex flex-col w-full">
+                <div id='successMsg' class="hidden flex justify-center">
+                <div id='success' class=" w-1/2 text-black font-bold text-center p-2 bg-lime-500 rounded-lg"></div>
+                </div>
                 <form enctype="multipart/form-data" action="../traitement/insertMovieV2.php" method="post"> 
                 <div id="etape1" class=""><?php include('./etapeMovie/etape1.php'); ?></div>
                 <div id="etape2" class="hidden"><?php include('./etapeMovie/etape2.php'); ?></div>
@@ -80,5 +83,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="../assets/js/inputCheck.js"></script>
 <script src="../assets/js/formMovieButton.js"></script>
+<!-- <script src="../assets/js/addMovie.js"></script> -->
 
 </html>

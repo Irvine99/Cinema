@@ -31,12 +31,44 @@ function movieIdCompare($idMovieGet){
         exit;
     }
 }
+function sameMovieCat(){
+    if(require('access.php')) {
+        
+        $movieId = "SELECT * FROM movie where Id_movie = $idMovieGet";
+        $movieIdRequest = $conn->prepare($movieId);
+        $movieIdRequest->execute();
+        $movieIdFind = $movieIdRequest->fetch();
+        
+        return $movieIdFind;
+    
+       
+        exit;
+    }
+}
 
 function movieAll() {
 
     if(require('access.php')) {
 
     $movieName = "SELECT * FROM movie ORDER BY Id_movie DESC ";
+    $movieRequest = $conn->prepare($movieName);
+    $movieRequest->execute();
+    $movieFind = $movieRequest->fetchAll();
+    
+    return $movieFind;
+
+   
+    exit;
+
+    }
+}
+function movieSameCat($Id_category) {
+
+    if(require('access.php')) {
+
+    $movieName = "SELECT * FROM movie 
+    INNER JOIN movie_category ON movie_category.Id_category = category.Id_category
+    WHERE movie_category.Id_category = ?";
     $movieRequest = $conn->prepare($movieName);
     $movieRequest->execute();
     $movieFind = $movieRequest->fetchAll();
@@ -242,7 +274,7 @@ function movieCategorie($idCat) {
 }
 function searchMovie() {
     if(require('access.php')) {
-        $movie = "SELECT * FROM movie ORDER BY name_movie";
+        $movie = "SELECT * FROM movie ORDER BY Id_movie";
         $requestmovie = $conn->prepare($movie);
         $requestmovie->execute();
         $findmovie = $requestmovie->fetchALL();

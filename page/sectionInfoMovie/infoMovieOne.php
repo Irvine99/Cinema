@@ -37,7 +37,7 @@
                             <h3 class="text-white/80  text-md font-light">98% des utilisateurs</h3>
                         </div>
                     </div>
-                    <button class="bg-[#E82626] w-1/2 mt-5  rounded-lg text-white py-1 px-2">Regarder</button>
+                    <button class="bg-[#E82626] w-1/2 mt-5  rounded-lg text-white py-1 px-4">Regarder</button>
                 </div>
                 <div class="w-1/2">
                     <img  src="<?= $movie['affiche_movie'] ?>" alt="" class="rounded-lg  h-full w-full">
@@ -84,7 +84,7 @@
                         <h3 class="text-white/80  text-sm font-light">98% des utilisateurs</h3>
                     </div>
                 </div>
-                <button class="bg-[#E82626]  rounded-lg text-white py-1 px-2 w-1/4 mt-4">Regarder</button>
+                <button class="bg-[#E82626]  rounded-lg text-white py-1  w-[30%] mt-4">Regarder</button>
                 <div class="flex flex-col">
                     <div class=""><?php include('./sectionInfoMovie/infoMovieThree.php'); ?></div>
                     <div class=""><?php include('./sectionInfoMovie/infoMovieTwo.php'); ?></div>

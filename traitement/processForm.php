@@ -37,7 +37,7 @@ if ($_POST) {
                 'password' => password_hash($_POST['password'], PASSWORD_DEFAULT)
             ]);
 
-            $data["success"] = "Vous avez valider votre inscription";
+            $data["success"] = "Vous avez valider votre inscription".'<br>'.'Vous allez être redirige dans 3s vers la page de connection';
 
 
 

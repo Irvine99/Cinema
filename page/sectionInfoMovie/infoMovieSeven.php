@@ -1,3 +1,9 @@
+<?php 
+
+
+
+?>
+
 <div class="md:hidden">
   <div class="mx-2 mb-20">
       <div class="mt-7 mb-2 text-xl font-bold">Dans le même genre</div>

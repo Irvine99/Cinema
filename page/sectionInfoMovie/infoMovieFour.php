@@ -1,12 +1,12 @@
 <div class="md:hidden mx-2">
     <div class="flex justify-center flex-wrap gap-4">
-    <swiper-container class="mySwiper"  slides-per-view="2.8"
+    <swiper-container class="mySwiper"  slides-per-view="auto"
         space-between="" free-mode="true">
         <?php 
         foreach ($actors as $actor) { ?>
         <swiper-slide>
         
-            <div class="mt-7 mb-1 items-center flex flex-col">
+            <div class="w-full mt-7 mb-1 items-center flex flex-col">
             <img src="<?= $actor['avatar_actor'] ?>" alt="" class=" h-[100px] w-[100px]">
             <h3 class=""><?= $actor['name_actor'] ?></h3>
             </div>
@@ -24,13 +24,13 @@
 <div class="hidden md:block lg:hidden">
 <div class="w-[90%]">
         
-        <swiper-container class="mySwiper"  slides-per-view="2"
+        <swiper-container class="mySwiper"  slides-per-view="auto"
         space-between="3" free-mode="true">
         <?php 
         foreach ($actors as $actor) { ?>
         <swiper-slide>
         
-            <div class="mt-7 mb-1 items-center flex flex-col">
+            <div class=" mt-7 mb-1 items-center flex flex-col">
             <img src="<?= $actor['avatar_actor'] ?>" alt="" class=" h-[100px] w-[100px]">
             <h3 class=""><?= $actor['name_actor'] ?></h3>
             </div>

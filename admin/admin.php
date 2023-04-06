@@ -38,8 +38,8 @@
 </head>
 <body class="h-screen bg-[url('./../assets/img/wallpaper.jpg')]">
     <div class="h-full bg-black/70">
-     <div class="">
-        <a href="./../page/accueil.php"><img src="./../assets/img/back.png" alt="" class="pt-3 pl-3"></a>
+    <div class="">
+        <a href="../page/accueil.php"><div class=" p-4"><img class="w-[25px] h-[25px]" src="./../assets/img/back2.png" alt=""></div></a>
      </div>   
      <div class="py-5 flex flex-col justify-center items-center">
         <img class="rounded-full h-[150px] w-[150px]" src="./../assets/img/pikahead.jpg" alt="">

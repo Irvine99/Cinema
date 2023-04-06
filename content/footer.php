@@ -5,6 +5,6 @@
         <h3 class="text-xl md:text-sm lg:text-md text-center font-light">A Propos de MOVIE.CM</h3>
         <h3 class="text-xl md:text-sm lg:text-md text-center font-light">Conditions Génerales</h3>
         <h3 class="text-xl md:text-sm lg:text-md text-center font-light">Qui sommes-nous</h3>
-        <h3 class="text-xl md:text-sm lg:text-md text-center font-light">Gerez vos préferences</h3>
+        <a href="/portfolioV3/projets/cinema/page/message.php"><h3 class="text-xl md:text-sm lg:text-md text-center font-light">Contactez-nous</h3></a>
     </div>
 </footer>

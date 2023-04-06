@@ -35,21 +35,28 @@
 </head>
 <body class="h-screen bg-[url('./../assets/img/wallpaper.jpg')]">
     <div class="h-full bg-black/70">
-    <img src="./../assets/img/Logo.png" alt="" class="">
+    <a href="./accueil.php"><div class=" p-4"><img class="w-[25px] h-[25px]" src="./../assets/img/back2.png" alt=""></div></a>
+    <div class="flex justify-center items-center"><img src="./../assets/img/Logo.png" alt="" class=""></div>
      <div class="flex flex-col justify-center items-center">
-        <div class="bg-[#1C1A29]/80 p-1 rounded-lg w-3/4">
-            <h1 class="text-xl mb-7 font-bold py-2 text-center">Identifiez vous</h1>
-            <div class="flex flex-col items-center gap-1">
-                <label for="" class="">Votre email</label>
-                <input class="rounded-lg w-2/3 bg-[#5E5E5E]" type="email" name="" id="">
-            </div>
-            <div class="mt-5 flex flex-col items-center gap-1">
-                <label for="" class="">Votre message</label>
-                <textarea class="rounded-lg w-5/6 3 bg-[#5E5E5E]" name="" id="" cols="30" rows="5"></textarea>
-            </div>
-            <div class="flex justify-center mt-7 mb-2">
-                <button class="bg-[#5E5E5E] rounded-lg py-1 px-4" type="submit">Envoyer</button>
-            </div>
+        <div class="bg-[#1C1A29]/80 p-1 rounded-lg w-2/4">
+            <form action="../traitement/sendMessage.php" method="post">
+              <h1 class="text-xl mb-7 font-bold py-2 text-center">Laissez nous un message</h1>
+              <div class="flex flex-col items-center gap-1">
+                  <label for="" class="">Votre Nom</label>
+                  <input class="rounded-lg md:w-2/6 w-1/2 bg-[#5E5E5E]" type="text" name="name" id="name">
+              </div>
+              <div class="flex flex-col items-center gap-1">
+                  <label for="" class="">Votre email</label>
+                  <input class="rounded-lg md:w-2/6 w-1/2 bg-[#5E5E5E]" type="email" name="senderEmail" id="senderEmail">
+              </div>
+              <div class="mt-5 flex flex-col items-center gap-1">
+                  <label for="" class="">Votre message</label>
+                  <textarea class="rounded-lg w-5/6 md:w-1/2 3 bg-[#5E5E5E]" name="mailMessage" id="mailMessage" cols="30" rows="5"></textarea>
+              </div>
+              <div class="flex justify-center mt-7 mb-2">
+                  <button class="bg-[#5E5E5E] rounded-lg py-1 px-4" type="submit">Envoyer</button>
+              </div>
+            </form>
             
         </div>    
      </div>     
